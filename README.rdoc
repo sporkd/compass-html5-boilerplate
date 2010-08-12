@@ -1,0 +1,9 @@
+= Compass Html5 Boilerplate
+
+A compass extension based on html5-boilerplate found at:
+http://html5boilerplate.com
+
+== Installation
+
+For now, just clone to your plugins/compass_extensions directory.
+A gem is in the works.
