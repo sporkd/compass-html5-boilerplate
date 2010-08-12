@@ -1,0 +1,139 @@
+
+$html5-bolierplate-font-family: arial, helvetica, "Nimbus Sans L", "Bitstream Vera Sans", sans-serif !default;
+
+$html5-bolierplate-fixed-font-family: "Courier New", monospace, serif !default;
+
+$html5-bolierplate-font-size: 13px !default;
+
+$html5-bolierplate-font-color: #444 !default;  //looks better than black: twitter.com/H_FJ/statuses/11800719859
+
+$html5-bolierplate-link-color: #607890 !default;
+
+$html5-bolierplate-link-hover-color: #036 !default;
+
+$html5-bolierplate-link-active-color: #607890 !default;
+
+$html5-bolierplate-link-visited-color: #607890 !default;
+
+$html5-bolierplate-selected-font-color: #fff !default;
+
+$html5-bolierplate-selected-color: #FF5E99 !default;
+
+$html5-bolierplate-selected-font-color: #fff !default;
+
+
+//
+// minimal base styles
+//
+
+@mixin html5-boilerplate-base {
+  body, select, input, textarea { color: $html5-bolierplate-font-color; }
+
+  h1,h2,h3,h4,h5,h6 { @include optimize-legibility; }
+
+  html { @include font-smoothing; }
+
+  @include accessible-focus;
+  
+  a, a:active, a:visited { color: $html5-bolierplate-link-color; }
+  a:hover { color: $html5-bolierplate-link-hover-color; }
+
+  ul { margin-left:30px; }
+  ol { margin-left:30px; list-style-type: decimal; }
+
+  small { @include small; }
+  strong, th { @include strong; }
+
+  td, td img { vertical-align: top; }
+  
+  sub { vertical-align: sub; font-size: smaller; }
+  sup { vertical-align: super; font-size: smaller; }
+
+  @include quoted-pre;
+
+  @include align-input-labels;
+  
+  @include hand-cursor-inputs;
+
+  @include selected-text;
+
+  @include webkit-tap-highlight;
+
+  @include ie-hacks;
+}
+
+
+// www.aestheticallyloyal.com/public/optimize-legibility/
+@mixin optimize-legibility {
+  font-weight: bold; text-rendering: optimizeLegibility;
+}
+
+// maxvoltar.com/archive/-webkit-font-smoothing
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+}
+
+// Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test
+@mixin accessible-focus {
+  a:active { outline: none; }
+  a:focus { outline: thin dotted; }
+}
+
+@mixin small {
+  font-size: 85%;
+}
+
+@mixin strong {
+  font-weight: bold;
+}
+
+// www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/
+@mixin quoted-pre {
+  pre {
+    padding: 15px;
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+  }
+}
+
+// align checkboxes, radios, text inputs with their label
+// by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css
+@mixin align-input-labels {
+  input[type="radio"] { vertical-align: text-bottom; }
+  input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+  .ie6 input { vertical-align: text-bottom; }
+}
+
+// hand cursor on clickable input elements
+@mixin hand-cursor-inputs {
+  label, input[type=button], input[type=submit], button { cursor: pointer; }
+}
+
+// These selection declarations have to be separate.
+// No text-shadow: twitter.com/miketaylr/status/12228805301 
+// Also: hot pink.
+@mixin selected-text {
+  ::-moz-selection{ background:$html5-bolierplate-selected-color; color:$html5-bolierplate-selected-font-color; text-shadow: none; }
+  ::selection { background:$html5-bolierplate-selected-color; color:$html5-bolierplate-selected-font-color; text-shadow: none; }
+}
+
+// j.mp/webkit-tap-highlight-color
+@mixin webkit-tap-highlight {
+  a:link { -webkit-tap-highlight-color: #FF5E99; }
+}
+
+@mixin ie-hacks {
+  // always force a scrollbar in non-IE
+  html { overflow-y: scroll; }
+
+  // make buttons play nice in IE:    
+  // www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
+  button {  width: auto; overflow: visible; }
+
+  // bicubic resizing for non-native sized IMG: 
+  // code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+  .ie7 img { -ms-interpolation-mode: bicubic; }
+}
+
