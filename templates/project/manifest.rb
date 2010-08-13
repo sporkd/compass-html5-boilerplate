@@ -2,12 +2,12 @@ description "Compass extention for Html5 Boilerplate located at http://html5boil
 
 stylesheet 'screen.scss', :media => 'screen, projection'
 stylesheet 'handheld.scss', :media => 'handheld'
-stylesheet 'partials/_base.scss'
-stylesheet 'partials/_fonts.scss'
-stylesheet 'partials/_handheld.scss'
-stylesheet 'partials/_helpers.scss'
-stylesheet 'partials/_media.scss'
-stylesheet 'partials/_reset.scss'
+stylesheet 'html5-boilerplate/_base.scss'
+stylesheet 'html5-boilerplate/_fonts.scss'
+stylesheet 'html5-boilerplate/_handheld.scss'
+stylesheet 'html5-boilerplate/_helpers.scss'
+stylesheet 'html5-boilerplate/_media.scss'
+stylesheet 'html5-boilerplate/_reset.scss'
 
 file 'README.rdoc'
 
