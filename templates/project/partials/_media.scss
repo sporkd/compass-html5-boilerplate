@@ -1,0 +1,15 @@
+@media print {
+  @include media-print;
+}
+
+@media all and (orientation:portrait) { 
+  @include media-orientation-portrait;
+}
+
+@media all and (orientation:landscape) {
+  @include media-orientation-landscape;
+}
+
+@media screen and (max-device-width: 480px) {
+  @include media-mobile;
+}

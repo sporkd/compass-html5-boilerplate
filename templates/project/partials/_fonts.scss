@@ -1,0 +1,7 @@
+body { @include body-font; }
+
+table { @include table-font; }
+
+select, input, textarea { @include input-font; }
+
+code, pre { @include monospace-font; }

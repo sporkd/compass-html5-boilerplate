@@ -1,0 +1,16 @@
+@import "html5-boilerplate";
+@include html5-boilerplate-reset;
+
+@import "partials/defaults";
+
+// Use these partial for more customization
+//@import "partials/base";
+//@import "partials/fonts";
+//@import "partials/helpers";
+//@import "partials/media";
+
+// Otherwise just include everything
+@include html5-boilerplate-base;
+@include html5-boilerplate-fonts;
+@include html5-boilerplate-helpers;
+@include html5-boilerplate-media;

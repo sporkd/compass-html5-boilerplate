@@ -1,0 +1,35 @@
+body, select, input, textarea { color: $html5-bolierplate-font-color; }
+
+h1,h2,h3,h4,h5,h6 { @include optimize-legibility; }
+
+html { @include font-smoothing; }
+
+@include accessible-focus;
+
+a, a:active, a:visited { color: $html5-bolierplate-link-color; }
+a:hover { color: $html5-bolierplate-link-hover-color; }
+
+ul { margin-left:30px; }
+ol { margin-left:30px; list-style-type: decimal; }
+
+small { @include small; }
+strong, th { @include strong; }
+
+td, td img { vertical-align: top; }
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+pre {
+  @include quoted-pre;
+}
+
+@include align-input-labels;
+
+@include hand-cursor-inputs;
+
+@include selected-text;
+
+@include webkit-tap-highlight;
+
+@include ie-hacks;
