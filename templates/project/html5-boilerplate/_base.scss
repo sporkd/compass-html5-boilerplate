@@ -20,9 +20,8 @@ td, td img { vertical-align: top; }
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
 
-pre {
-  @include quoted-pre;
-}
+
+@include quoted-pre;
 
 @include align-input-labels;
 

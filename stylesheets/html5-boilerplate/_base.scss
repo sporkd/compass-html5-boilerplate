@@ -1,5 +1,5 @@
 
-$html5-bolierplate-font-family: arial, helvetica, "Nimbus Sans L", "Bitstream Vera Sans", sans-serif !default;
+$html5-bolierplate-font-family: sans-serif !default;
 
 $html5-bolierplate-fixed-font-family: "Courier New", monospace, serif !default;
 
@@ -49,9 +49,7 @@ $html5-bolierplate-selected-font-color: #fff !default;
   sub { vertical-align: sub; font-size: smaller; }
   sup { vertical-align: super; font-size: smaller; }
 
-  pre {
-    @include quoted-pre;
-  }
+  @include quoted-pre;
 
   @include align-input-labels;
   
@@ -91,11 +89,13 @@ $html5-bolierplate-selected-font-color: #fff !default;
 
 // www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/
 @mixin quoted-pre {
-  padding: 15px;
-  white-space: pre; /* CSS2 */
-  white-space: pre-wrap; /* CSS 2.1 */
-  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-  word-wrap: break-word; /* IE */
+  pre {
+    padding: 15px;
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+  }
 }
 
 // align checkboxes, radios, text inputs with their label
