@@ -60,19 +60,27 @@ $ compass create myproject -r html5-boilerplate -u html5-boilerplate
 
 }
 
+if Compass.configuration.project_type == :rails
 welcome_message %Q{
 You've installed HTML5 Boilerplate. Good for you!
 Now, a few minor points to store into your brainpan...
 
 This has only been tested on Rails3, but should work ok on Rails2.
 
-The installation conveniently attempts to overwrite rails.js with the Rails jquery
-driver (found at http://github.com/rails/jquery-ujs). But it can only do this if
-you use the --forceflag on installation.
-  
+The installation attempts to overwrite the default rails.js for Prototype with the
+Rails jquery driver (found at http://github.com/rails/jquery-ujs). However, it can
+only do this if you use the `--force` flag on installation.
+
 If you still have an application.html.erb in your layouts, you might want to
 loose it now so Rails uses your shiny new application.html.haml layout instead.
 
 }
+else
+welcome_message %Q{
+You've installed HTML5 Boilerplate. Good for you!
 
- 
+Danger. Here be dragons...
+Some directory locations may still be amiss with the stand-alone version.
+
+}
+end

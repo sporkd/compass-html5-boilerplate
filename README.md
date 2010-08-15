@@ -19,9 +19,9 @@ Rails Installation
 
 This has only been tested on Rails3, but should work ok on Rails2.
 
-The installation conveniently attempts to overwrite rails.js with the Rails jquery
-driver (found at http://github.com/rails/jquery-ujs). But it can only do this if
-you use the `--force` flag on installation.
+The installation attempts to overwrite the default rails.js for Prototype with the
+Rails jquery driver (found at http://github.com/rails/jquery-ujs). However, it can
+only do this if you use the `--force` flag on installation.
 
 If you still have an application.html.erb in your layouts, you might want to
 loose it now so Rails uses your shiny new application.html.haml layout instead.
@@ -40,6 +40,5 @@ License
 HTML5 Boilerplate by Paul Irish
 (comments left intact in scss files)
 
-Compass Extension Copyright (c) 2010, Peter Gumeson
-
-http://creativecommons.org/licenses/by/3.0/
+Compass Extension Copyright (c) 2010, Peter Gumeson  
+[http://creativecommons.org/licenses/by/3.0](http://creativecommons.org/licenses/by/3.0)
