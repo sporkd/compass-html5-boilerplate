@@ -1,0 +1,35 @@
+-# Grab Google CDN's jQuery
+- if defined?(google_api_key) && !google_api_key.blank?
+  = javascript_include_tag "http://www.google.com/jsapi?key=#{google_api_key}"
+  :javascript
+    google.load("jquery", "1.4.2");
+- else
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+
+-# fall back to local jQuery if necessary
+:javascript
+  !window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')
+  
+= javascript_include_tag 'rails', 'plugins', 'application'
+
+/[if lt IE 7 ]
+  = javascript_include_tag 'dd_belatedpng'
+  
+-#  Append your own using content_for :javascripts
+= yield :javascripts
+
+-# yui profiler and profileviewer
+- if RAILS_ENV == 'development'
+  = javascript_include_tag 'profiling/yahoo-profiling.min.js', 'profiling/config.js'
+
+-# asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
+-# change the UA-XXXXX-X to be your site's ID
+:javascript
+  var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+  (function(d, t) {
+   var g = d.createElement(t),
+       s = d.getElementsByTagName(t)[0];
+   g.async = true;
+   g.src = '//www.google-analytics.com/ga.js';
+   s.parentNode.insertBefore(g, s);
+  })(document, 'script');
