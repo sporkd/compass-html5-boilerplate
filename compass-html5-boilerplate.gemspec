@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.version = "0.1.0"
+  s.version = "0.1.1"
   s.date = "2010-08-15"
 
   s.name = "compass-html5-boilerplate"
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email = "gumeson@gmail.com"
   s.homepage = "http://github.com/sporkd/compass-html5-boilerplate"
 
-  s.files = %w(README.rdoc)
+  s.files = %w(README.md)
   s.files += Dir.glob("lib/**/*.*")
   s.files += Dir.glob("stylesheets/**/*.*")
   s.files += Dir.glob("templates/**/*.*")
