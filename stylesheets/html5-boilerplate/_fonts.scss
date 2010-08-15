@@ -19,11 +19,11 @@
 }
 
 @mixin body-font {
-  font:$html5-bolierplate-font-size $html5-bolierplate-font-family; *font-size:small; *font:x-small; line-height:1.22;
+  font:$html5-boilerplate-font-size $html5-boilerplate-font-family; *font-size:small; *font:x-small; line-height:1.22;
 }
 
 @mixin input-font {
-  font:99% $html5-bolierplate-font-family;
+  font:99% $html5-boilerplate-font-family;
 }
 
 @mixin table-font {
@@ -34,5 +34,5 @@
 // meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 // en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
 @mixin monospace-font {
-  font-family: $html5-bolierplate-fixed-font-family;
+  font-family: $html5-boilerplate-fixed-font-family;
 }

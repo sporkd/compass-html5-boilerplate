@@ -1,4 +1,4 @@
-body, select, input, textarea { color: $html5-bolierplate-font-color; }
+body, select, input, textarea { color: $html5-boilerplate-font-color; }
 
 h1,h2,h3,h4,h5,h6 { @include optimize-legibility; }
 
@@ -6,8 +6,8 @@ html { @include font-smoothing; }
 
 @include accessible-focus;
 
-a, a:active, a:visited { color: $html5-bolierplate-link-color; }
-a:hover { color: $html5-bolierplate-link-hover-color; }
+a, a:active, a:visited { color: $html5-boilerplate-link-color; }
+a:hover { color: $html5-boilerplate-link-hover-color; }
 
 ul { margin-left:30px; }
 ol { margin-left:30px; list-style-type: decimal; }

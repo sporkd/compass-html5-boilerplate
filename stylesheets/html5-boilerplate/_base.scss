@@ -1,25 +1,25 @@
 
-$html5-bolierplate-font-family: sans-serif !default;
+$html5-boilerplate-font-family: sans-serif !default;
 
-$html5-bolierplate-fixed-font-family: "Courier New", monospace, serif !default;
+$html5-boilerplate-fixed-font-family: "Courier New", monospace, serif !default;
 
-$html5-bolierplate-font-size: 13px !default;
+$html5-boilerplate-font-size: 13px !default;
 
-$html5-bolierplate-font-color: #444 !default;  //looks better than black: twitter.com/H_FJ/statuses/11800719859
+$html5-boilerplate-font-color: #444 !default;  //looks better than black: twitter.com/H_FJ/statuses/11800719859
 
-$html5-bolierplate-link-color: #607890 !default;
+$html5-boilerplate-link-color: #607890 !default;
 
-$html5-bolierplate-link-hover-color: #036 !default;
+$html5-boilerplate-link-hover-color: #036 !default;
 
-$html5-bolierplate-link-active-color: #607890 !default;
+$html5-boilerplate-link-active-color: #607890 !default;
 
-$html5-bolierplate-link-visited-color: #607890 !default;
+$html5-boilerplate-link-visited-color: #607890 !default;
 
-$html5-bolierplate-selected-font-color: #fff !default;
+$html5-boilerplate-selected-font-color: #fff !default;
 
-$html5-bolierplate-selected-color: #FF5E99 !default;
+$html5-boilerplate-selected-color: #FF5E99 !default;
 
-$html5-bolierplate-selected-font-color: #fff !default;
+$html5-boilerplate-selected-font-color: #fff !default;
 
 
 //
@@ -27,7 +27,7 @@ $html5-bolierplate-selected-font-color: #fff !default;
 //
 
 @mixin html5-boilerplate-base {
-  body, select, input, textarea { color: $html5-bolierplate-font-color; }
+  body, select, input, textarea { color: $html5-boilerplate-font-color; }
 
   h1,h2,h3,h4,h5,h6 { @include optimize-legibility; }
 
@@ -35,8 +35,8 @@ $html5-bolierplate-selected-font-color: #fff !default;
 
   @include accessible-focus;
   
-  a, a:active, a:visited { color: $html5-bolierplate-link-color; }
-  a:hover { color: $html5-bolierplate-link-hover-color; }
+  a, a:active, a:visited { color: $html5-boilerplate-link-color; }
+  a:hover { color: $html5-boilerplate-link-hover-color; }
 
   ul { margin-left:30px; }
   ol { margin-left:30px; list-style-type: decimal; }
@@ -115,8 +115,8 @@ $html5-bolierplate-selected-font-color: #fff !default;
 // No text-shadow: twitter.com/miketaylr/status/12228805301 
 // Also: hot pink.
 @mixin selected-text {
-  ::-moz-selection{ background:$html5-bolierplate-selected-color; color:$html5-bolierplate-selected-font-color; text-shadow: none; }
-  ::selection { background:$html5-bolierplate-selected-color; color:$html5-bolierplate-selected-font-color; text-shadow: none; }
+  ::-moz-selection{ background:$html5-boilerplate-selected-color; color:$html5-boilerplate-selected-font-color; text-shadow: none; }
+  ::selection { background:$html5-boilerplate-selected-color; color:$html5-boilerplate-selected-font-color; text-shadow: none; }
 }
 
 // j.mp/webkit-tap-highlight-color
