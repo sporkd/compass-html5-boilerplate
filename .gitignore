@@ -2,4 +2,4 @@
 *.tmproj
 tmp/*
 pkg/*
-compass-*.gem
+html5-boilerplate-*.gem

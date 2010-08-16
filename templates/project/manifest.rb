@@ -47,7 +47,7 @@ This is a Compass extention for HTML5 Boilerplate by Paul Irish
   (see http://html5boilerplate.com)
 
 Installation for a Rails Project:
-$ gem install compass-html5-boilerplate
+$ gem install html5-boilerplate
 $ cd my_rails_project
 $ compass init rails -r html5-boilerplate -u html5-boilerplate --force
 
@@ -55,7 +55,7 @@ $ compass init rails -r html5-boilerplate -u html5-boilerplate --force
 
 
 Stand-alone Project:
-$ gem install compass-html5-boilerplate
+$ gem install html5-boilerplate
 $ compass create myproject -r html5-boilerplate -u html5-boilerplate
 
 }

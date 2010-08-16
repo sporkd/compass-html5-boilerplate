@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.version = "0.1.1"
-  s.date = "2010-08-15"
+  s.version = "0.1.0"
+  s.date = "2010-08-16"
 
-  s.name = "compass-html5-boilerplate"
+  s.name = "html5-boilerplate"
   s.authors = ["Peter Gumeson"]
   s.summary = %q{A Compass extension based on Paul Irish's HTML5 Boilerplate}
   s.description = %q{A Compass extension based on Paul Irish's HTML5 Boilerplate at http://html5boilerplate.com}
