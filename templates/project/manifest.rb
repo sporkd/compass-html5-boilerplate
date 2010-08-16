@@ -2,11 +2,11 @@ description "Compass extention for HTML5 Boilerplate located at http://html5boil
 
 stylesheet 'style.scss', :media => 'screen, projection'
 stylesheet 'handheld.scss', :media => 'handheld'
-stylesheet 'html5-boilerplate/_base.scss'
-stylesheet 'html5-boilerplate/_defaults.scss'
-stylesheet 'html5-boilerplate/_fonts.scss'
-stylesheet 'html5-boilerplate/_helpers.scss'
-stylesheet 'html5-boilerplate/_media.scss'
+stylesheet 'html5/_base.scss'
+stylesheet 'html5/_defaults.scss'
+stylesheet 'html5/_fonts.scss'
+stylesheet 'html5/_helpers.scss'
+stylesheet 'html5/_media.scss'
 
 if Compass.configuration.project_type == :rails
   file 'application.html.haml', :to => 'app/views/layouts/application.html.haml'
@@ -60,27 +60,7 @@ $ compass create myproject -r html5-boilerplate -u html5-boilerplate
 
 }
 
-if Compass.configuration.project_type == :rails
-welcome_message %Q{
-You've installed HTML5 Boilerplate. Good for you!
-Now, a few minor points to store into your brainpan...
-
-This has only been tested on Rails3, but should work ok on Rails2.
-
-The installation attempts to overwrite the default rails.js for Prototype with the
-Rails jquery driver (found at http://github.com/rails/jquery-ujs). However, it can
-only do this if you use the `--force` flag on installation.
-
-If you still have an application.html.erb in your layouts, you might want to
-loose it now so Rails uses your shiny new application.html.haml layout instead.
-
-}
-else
 welcome_message %Q{
 You've installed HTML5 Boilerplate. Good for you!
 
-Danger. Here be dragons...
-Some directory locations may still be amiss with the stand-alone version.
-
 }
-end

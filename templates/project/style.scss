@@ -1,16 +1,19 @@
+// Import and include reset mixin
 @import "html5-boilerplate";
 @include html5-boilerplate-reset;
 
-@import "html5-boilerplate/defaults";
+// Set some default constants 
+@import "html5/defaults";
 
-// Use these partials for more customization
-//@import "html5-boilerplate/base";
-//@import "html5-boilerplate/fonts";
-//@import "html5-boilerplate/helpers";
-//@import "html5-boilerplate/media";
+// Import these partials to customize
+// which mixins are included
+@import "html5/base";
+@import "html5/fonts";
+@import "html5/helpers";
+@import "html5/media";
 
 // Otherwise just include everything
-@include html5-boilerplate-base;
-@include html5-boilerplate-fonts;
-@include html5-boilerplate-helpers;
-@include html5-boilerplate-media;
+//@include html5-boilerplate-base;
+//@include html5-boilerplate-fonts;
+//@include html5-boilerplate-helpers;
+//@include html5-boilerplate-media;
