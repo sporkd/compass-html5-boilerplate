@@ -31,10 +31,13 @@ $html5-boilerplate-selected-font-color: #fff !default;
 
   h1,h2,h3,h4,h5,h6 { @include optimize-legibility; }
 
-  html { @include font-smoothing; }
+  html {
+    @include font-smoothing;
+    @include force-scrollbar;
+  }
 
   @include accessible-focus;
-  
+
   a, a:active, a:visited { color: $html5-boilerplate-link-color; }
   a:hover { color: $html5-boilerplate-link-hover-color; }
 
@@ -45,14 +48,14 @@ $html5-boilerplate-selected-font-color: #fff !default;
   strong, th { @include strong; }
 
   td, td img { vertical-align: top; }
-  
+
   sub { vertical-align: sub; font-size: smaller; }
   sup { vertical-align: super; font-size: smaller; }
 
   @include quoted-pre;
 
   @include align-input-labels;
-  
+
   @include hand-cursor-inputs;
 
   @include selected-text;
@@ -124,10 +127,12 @@ $html5-boilerplate-selected-font-color: #fff !default;
   a:link { -webkit-tap-highlight-color: #FF5E99; }
 }
 
-@mixin ie-hacks {
-  // always force a scrollbar in non-IE
-  html { overflow-y: scroll; }
+// always force a scrollbar in non-IE
+@mixin force-scrollbar {
+  overflow-y: scroll;
+}
 
+@mixin ie-hacks {
   // make buttons play nice in IE:    
   // www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
   button {  width: auto; overflow: visible; }

@@ -2,7 +2,10 @@ body, select, input, textarea { color: $html5-boilerplate-font-color; }
 
 h1,h2,h3,h4,h5,h6 { @include optimize-legibility; }
 
-html { @include font-smoothing; }
+html {
+  @include font-smoothing;
+  @include force-scrollbar;
+}
 
 @include accessible-focus;
 
@@ -19,7 +22,6 @@ td, td img { vertical-align: top; }
 
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
-
 
 @include quoted-pre;
 
