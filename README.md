@@ -15,13 +15,19 @@ Rails Installation
 
 (The `--force` overwrites existing stuff so you get everything. What, you don't trust me?)
 
+Note: If you already have a config/compass.rb file in your project, you may need to
+manually add the following line to the top:
+
+    require 'html5-boilerplate'
+
 ### A few minor points to store into your brainpan...
 
 This has only been tested on Rails3, but should work ok on Rails2.
 
-The installation attempts to overwrite the default rails.js for Prototype with the
-Rails jquery driver (found at http://github.com/rails/jquery-ujs). However, it can
-only do this if you use the `--force` flag on installation.
+When using the `--force` flag on installation, it may overwrite existing files
+in your app/views/layouts or public/* directories. This is probably what
+you want, but just make sure your files are in git in case you need to
+refer back to them.
 
 If you still have an application.html.erb in your layouts, you might want to
 loose it now so Rails uses your shiny new application.html.haml layout instead.
@@ -31,7 +37,7 @@ Stand Alone Installation
 ========================
 
     gem install compass-html5-boilerplate
-    compass create myproject -r html5-boilerplate -u html5-boilerplate
+    compass create myproject -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
 
 
 License
