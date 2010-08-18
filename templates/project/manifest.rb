@@ -52,7 +52,7 @@ $ compass init rails -r html5-boilerplate -u html5-boilerplate --force
 Stand Alone Installation
 ========================
 $ gem install html5-boilerplate
-$ compass create myproject -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
+$ compass create my_project -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
 
 }
 

@@ -25,14 +25,11 @@ Rails Installation
     
     app/stylesheets/style.scss
     app/stylesheets/handheld.scss
-    app/stylesheets/html5/_base.scss
-    app/stylesheets/html5/_defaults.scss
-    app/stylesheets/html5/_fonts.scss
-    app/stylesheets/html5/_helpers.scss
-    app/stylesheets/html5/_media.scss
+    app/stylesheets/partials/_base.scss
+    app/stylesheets/partials/_html5_boilerplate.scss
     
-    public/.htaccess
     public/404.html
+    public/.htaccess
     public/crossdomain.xml
     public/robots.txt
 
@@ -70,12 +67,12 @@ Stand Alone Installation
 ========================
 
     gem install html5-boilerplate
-    compass create myproject -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
+    compass create my_project -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
 
 The `--javascripts-dir` and `--css-dir` flags are to keep consistent with the original project layout.
 If you omit them, be sure to edit your javascript and style tags accordingly in index.html.
 
-**This will create a `myproject` directory containing the following files:**  
+**This will create a `my_project` directory containing the following files:**  
 
     index.html
     404.html
@@ -85,11 +82,8 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     
     src/style.scss
     src/handheld.scss
-    src/html5/_base.scss
-    src/html5/_defaults.scss
-    src/html5/_fonts.scss
-    src/html5/_helpers.scss
-    src/html5/_media.scss
+    app/stylesheets/partials/_base.scss
+    app/stylesheets/partials/_html5_boilerplate.scss
 
     js/dd_belatedpng.js
     js/jquery-1.4.2.min.js
