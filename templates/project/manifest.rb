@@ -33,10 +33,10 @@ else
   javascript 'javascripts/profiling/yahoo-profiling.css', :to => 'profiling/yahoo-profiling.css'
   javascript 'javascripts/profiling/yahoo-profiling.min.js', :to => 'profiling/yahoo-profiling.min.js'
 end
-html '404.html'
-html 'htaccess.conf', :to => '.htaccess'
-html 'crossdomain.xml'
-html 'robots.txt'
+html 'public/404.html', :to => '404.html'
+html 'public/htaccess.conf', :to => '.htaccess'
+html 'public/crossdomain.xml', :to => 'crossdomain.xml'
+html 'public/robots.txt', :to => 'robots.txt'
 file 'nginx.conf'
 
 help %Q{
