@@ -1,10 +1,3 @@
-
-$html5-boilerplate-font-family: sans-serif !default;
-
-$html5-boilerplate-fixed-font-family: "Courier New", monospace, serif !default;
-
-$html5-boilerplate-font-size: 13px !default;
-
 $html5-boilerplate-font-color: #444 !default;  //looks better than black: twitter.com/H_FJ/statuses/11800719859
 
 $html5-boilerplate-link-color: #607890 !default;
@@ -29,7 +22,7 @@ $html5-boilerplate-selected-font-color: #fff !default;
 @mixin html5-boilerplate-base {
   body, select, input, textarea { color: $html5-boilerplate-font-color; }
 
-  h1,h2,h3,h4,h5,h6 { @include optimize-legibility; }
+  h1,h2,h3,h4,h5,h6 { font-weight: bold; }
 
   html {
     @include font-smoothing;
@@ -63,12 +56,6 @@ $html5-boilerplate-selected-font-color: #fff !default;
   @include webkit-tap-highlight;
 
   @include ie-hacks;
-}
-
-
-// www.aestheticallyloyal.com/public/optimize-legibility/
-@mixin optimize-legibility {
-  font-weight: bold; text-rendering: optimizeLegibility;
 }
 
 // maxvoltar.com/archive/-webkit-font-smoothing

@@ -13,21 +13,16 @@
   %meta{:content => "", :name => "description"}/
   %meta{:content => "", :name => "author"}/
   
-  -# 
-    Mobile Viewport Fix
-    j.mp/mobileviewport &amp; davidbcalhoun.com/2010/viewport-metatag
-    device-width : Occupy full width of the screen in its current orientation
-    initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-    maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
-  %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;", :name => "viewport"}/
+  -# Mobile viewport optimized: j.mp/bplateviewport
+  %meta{:content => "width=device-width; initial-scale=1.0", :name => "viewport"}/
   
-  -# Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references
+  -# Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references
   -# %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
   -# %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
   
   = render :partial => 'layouts/stylesheets'
   
-  -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements &amp; feature detects
+  -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
   = javascript_include_tag 'modernizr-1.5.min'
   
   = csrf_meta_tag

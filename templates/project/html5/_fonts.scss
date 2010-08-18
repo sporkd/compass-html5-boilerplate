@@ -1,7 +1,1 @@
-body { @include body-font; }
-
-table { @include table-font; }
-
-select, input, textarea { @include input-font; }
-
-pre, code, kbd, samp { @include monospace-font; }
+@include html5-boilerplate-fonts;  // refactor this

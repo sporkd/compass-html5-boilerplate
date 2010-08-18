@@ -22,8 +22,8 @@
   dl, dt, dd, ol, ul, li,
   fieldset, form, label, legend,
   table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, figure, footer, header, 
-  hgroup, menu, nav, section, menu,
+  article, aside, canvas, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section, summary,
   time, mark, audio, video {
     margin:0;
     padding:0;
@@ -32,10 +32,12 @@
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
-  }
+  }                  
 
-  article, aside, figure, footer, header, 
-  hgroup, nav, section { display: block; }
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section, summary { 
+      display:block;
+  }
 
   nav ul { list-style:none; }
 
