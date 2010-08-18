@@ -1,28 +1,22 @@
-// First, we'll import html5-boilerplate
+// First, set some default constants
+// to be used by html5-boilerplate
+@import "partials/base";
+
+// Then, we'll import the compass extension
 @import "html5-boilerplate";
 
-// Then, we'll include the reset mixin
-@include html5-boilerplate-reset;
-
-// Here's where you can set some default
-// constants to be used by html5-boilerplate
-@import "html5/defaults";
-
-// You can now choose to include the
-// whole enchilada with just one line.
+// Now you can now choose to include the
+// whole enchilada with just one line
 //@include html5-boilerplate-base;
 
 // Or, you can pick and choose only the
-// sections you want to include.
-//@include html5-boilerplate-base;
+// sections you want to include
+//@include html5-boilerplate-reset;
 //@include html5-boilerplate-fonts;
+//@include html5-boilerplate-page;
 //@include html5-boilerplate-helpers;
 //@include html5-boilerplate-media;
 
-// Or, you can import these partials if you
-// want more controll over which mixins to
-// include inside each section.
-@import "html5/base";
-@import "html5/fonts";
-@import "html5/helpers";
-@import "html5/media";
+// Or, you can import this partial if you want
+// full controll over which mixins to include
+@import "partials/html5_boilerplate";

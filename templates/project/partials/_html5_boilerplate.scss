@@ -1,0 +1,83 @@
+//--------------------------------
+// Reset
+//--------------------------------
+@include html5-boilerplate-reset;
+
+
+//--------------------------------
+// Fonts
+//--------------------------------
+@include html5-boilerplate-fonts;
+
+
+//--------------------------------
+// Page
+//--------------------------------
+body, select, input, textarea { color: $html5-boilerplate-font-color; }
+
+h1,h2,h3,h4,h5,h6 { @include bold-font; }
+
+html {
+  @include font-smoothing;
+  @include force-scrollbar;
+}
+
+a, a:active, a:visited { color: $html5-boilerplate-link-color; }
+a:hover { color: $html5-boilerplate-link-hover-color; }
+
+ul { margin-left: 30px; }
+ol { margin-left: 30px; list-style-type: decimal; }
+
+small { @include small-font; }
+strong, th { @include bold-font; }
+
+td, td img { vertical-align: top; }
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+@include accessible-focus;
+
+@include quoted-pre;
+
+@include align-input-labels;
+
+@include hand-cursor-inputs;
+
+@include selected-text;
+
+@include webkit-tap-highlight;
+
+@include ie-hacks;
+
+
+//--------------------------------
+// Helpers
+//--------------------------------
+.ir { @include image-replacement; }
+
+.hidden { @include hidden; }
+
+.visuallyhidden { @include visually-hidden; }
+
+@include magnificent-clearfix;
+
+
+//--------------------------------
+// Media
+//--------------------------------
+@media print {
+  @include media-print;
+}
+
+@media all and (orientation:portrait) { 
+  @include media-orientation-portrait;
+}
+
+@media all and (orientation:landscape) {
+  @include media-orientation-landscape;
+}
+
+@media screen and (max-device-width: 480px) {
+  @include media-mobile;
+}

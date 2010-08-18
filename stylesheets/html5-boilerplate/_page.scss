@@ -14,22 +14,19 @@ $html5-boilerplate-selected-color: #FF5E99 !default;
 
 $html5-boilerplate-selected-font-color: #fff !default;
 
-
 //
 // minimal base styles
 //
 
-@mixin html5-boilerplate-base {
+@mixin html5-boilerplate-page {
   body, select, input, textarea { color: $html5-boilerplate-font-color; }
 
-  h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+  h1,h2,h3,h4,h5,h6 { @include bold-font; }
 
   html {
     @include font-smoothing;
     @include force-scrollbar;
   }
-
-  @include accessible-focus;
 
   a, a:active, a:visited { color: $html5-boilerplate-link-color; }
   a:hover { color: $html5-boilerplate-link-hover-color; }
@@ -37,13 +34,15 @@ $html5-boilerplate-selected-font-color: #fff !default;
   ul { margin-left: 30px; }
   ol { margin-left: 30px; list-style-type: decimal; }
 
-  small { @include small; }
-  strong, th { @include strong; }
+  small { @include small-font; }
+  strong, th { @include bold-font; }
 
   td, td img { vertical-align: top; }
 
   sub { vertical-align: sub; font-size: smaller; }
   sup { vertical-align: super; font-size: smaller; }
+
+  @include accessible-focus;
 
   @include quoted-pre;
 
@@ -69,11 +68,11 @@ $html5-boilerplate-selected-font-color: #fff !default;
   a:focus { outline: thin dotted; }
 }
 
-@mixin small {
+@mixin small-font {
   font-size: 85%;
 }
 
-@mixin strong {
+@mixin bold-font {
   font-weight: bold;
 }
 
@@ -81,10 +80,10 @@ $html5-boilerplate-selected-font-color: #fff !default;
 @mixin quoted-pre {
   pre {
     padding: 15px;
-    white-space: pre; /* CSS2 */
-    white-space: pre-wrap; /* CSS 2.1 */
-    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-    word-wrap: break-word; /* IE */
+    white-space: pre;       // CSS2
+    white-space: pre-wrap;  // CSS 2.1
+    white-space: pre-line;  // CSS 3 (and 2.1 as well, actually)
+    word-wrap: break-word;  // IE
   }
 }
 
@@ -128,4 +127,3 @@ $html5-boilerplate-selected-font-color: #fff !default;
   // code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
   .ie7 img { -ms-interpolation-mode: bicubic; }
 }
-

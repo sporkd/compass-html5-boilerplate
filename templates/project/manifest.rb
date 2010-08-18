@@ -2,11 +2,8 @@ description "Compass extention for HTML5 Boilerplate located at http://html5boil
 
 stylesheet 'style.scss', :media => 'screen, projection'
 stylesheet 'handheld.scss', :media => 'handheld'
-stylesheet 'html5/_base.scss'
-stylesheet 'html5/_defaults.scss'
-stylesheet 'html5/_fonts.scss'
-stylesheet 'html5/_helpers.scss'
-stylesheet 'html5/_media.scss'
+stylesheet 'partials/_base.scss'
+stylesheet 'partials/_html5_boilerplate.scss'
 
 if Compass.configuration.project_type == :rails
   file 'application.html.haml', :to => 'app/views/layouts/application.html.haml'
@@ -44,19 +41,18 @@ file 'nginx.conf'
 
 help %Q{
 This is a Compass extention for HTML5 Boilerplate by Paul Irish
-  (see http://html5boilerplate.com)
+(See full docs at: http://github.com/sporkd/compass-html5-boilerplate)
 
-Installation for a Rails Project:
+Rails Installation
+========================
 $ gem install html5-boilerplate
 $ cd my_rails_project
 $ compass init rails -r html5-boilerplate -u html5-boilerplate --force
 
-(--force overwrites existing stuff so you get everything. What, you don't trust me?)
-
-
-Stand-alone Project:
+Stand Alone Installation
+========================
 $ gem install html5-boilerplate
-$ compass create myproject -r html5-boilerplate -u html5-boilerplate
+$ compass create myproject -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
 
 }
 
