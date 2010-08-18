@@ -1,8 +1,11 @@
+// This file must be imported before any includes you
+// want the defaults to be overridden inside of.
+
 $html5-boilerplate-font-family: sans-serif;
 
 $html5-boilerplate-fixed-font-family: "Courier New", monospace, serif;
 
-$html5-boilerplate-font-size: 13px !default;
+$html5-boilerplate-font-size: 13px;
 
 $html5-boilerplate-font-color: #444;  //looks better than black: twitter.com/H_FJ/statuses/11800719859
 
