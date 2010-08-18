@@ -79,7 +79,7 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
 
     index.html
     404.html
-    htaccess
+    .htaccess
     crossdomain.xml
     robots.txt
     

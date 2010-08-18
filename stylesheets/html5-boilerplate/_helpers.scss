@@ -14,8 +14,8 @@
 
 // for image replacement
 @mixin image-replacement {
-  display:block;
-  text-indent:-999px;
+  display: block;
+  text-indent: -999px;
   overflow:hidden;
   background-repeat: none;
 }
@@ -24,7 +24,7 @@
 // css-discuss.incutio.com/wiki/Screenreader_Visibility
 @mixin hidden {
   display:none;
-  visibility:hidden;
+  visibility: hidden;
 }
 
 // Hide only visually, but have it available for screenreaders

@@ -41,8 +41,8 @@ $html5-boilerplate-selected-font-color: #fff !default;
   a, a:active, a:visited { color: $html5-boilerplate-link-color; }
   a:hover { color: $html5-boilerplate-link-hover-color; }
 
-  ul { margin-left:30px; }
-  ol { margin-left:30px; list-style-type: decimal; }
+  ul { margin-left: 30px; }
+  ol { margin-left: 30px; list-style-type: decimal; }
 
   small { @include small; }
   strong, th { @include strong; }
@@ -118,8 +118,8 @@ $html5-boilerplate-selected-font-color: #fff !default;
 // No text-shadow: twitter.com/miketaylr/status/12228805301 
 // Also: hot pink.
 @mixin selected-text {
-  ::-moz-selection{ background:$html5-boilerplate-selected-color; color:$html5-boilerplate-selected-font-color; text-shadow: none; }
-  ::selection { background:$html5-boilerplate-selected-color; color:$html5-boilerplate-selected-font-color; text-shadow: none; }
+  ::-moz-selection{ background:$html5-boilerplate-selected-color;color: $html5-boilerplate-selected-font-color; text-shadow: none; }
+  ::selection { background: $html5-boilerplate-selected-color; color: $html5-boilerplate-selected-font-color; text-shadow: none; }
 }
 
 // j.mp/webkit-tap-highlight-color

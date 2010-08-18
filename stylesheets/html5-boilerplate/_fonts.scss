@@ -19,15 +19,15 @@
 }
 
 @mixin body-font {
-  font:$html5-boilerplate-font-size $html5-boilerplate-font-family; *font-size:small; *font:x-small; line-height:1.22;
+  font: $html5-boilerplate-font-size $html5-boilerplate-font-family; *font-size:small; *font:x-small; line-height:1.22;
 }
 
 @mixin input-font {
-  font:99% $html5-boilerplate-font-family;
+  font: 99% $html5-boilerplate-font-family;
 }
 
 @mixin table-font {
-  font-size:inherit; font:100%;
+  font-size:inherit; font: 100%;
 }
 
 // normalize monospace sizing 
