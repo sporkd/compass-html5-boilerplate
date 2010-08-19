@@ -37,7 +37,7 @@ else
   javascript 'javascripts/profiling/yahoo-profiling.min.js', :to => 'profiling/yahoo-profiling.min.js'
 end
 html 'files/404.html', :to => '404.html'
-html 'files/htaccess.conf', :to => '.htaccess'
+html 'files/htaccess', :to => '.htaccess'
 html 'files/crossdomain.xml', :to => 'crossdomain.xml'
 html 'files/robots.txt', :to => 'robots.txt'
 html 'files/apple-touch-icon.png', :to => 'apple-touch-icon.png'

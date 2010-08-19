@@ -60,7 +60,7 @@ sup { vertical-align: super; font-size: smaller; }
 
 .visuallyhidden { @include visually-hidden; }
 
-@include magnificent-clearfix;
+@include magnificent-clearfix('clearfix');  // Override with custom class-name
 
 
 //--------------------------------

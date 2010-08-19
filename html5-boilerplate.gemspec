@@ -11,7 +11,8 @@ Gem::Specification.new do |s|
   s.email = "gumeson@gmail.com"
   s.homepage = "http://github.com/sporkd/compass-html5-boilerplate"
 
-  s.files = %w(README.md)
+  s.files = %w(README.md LICENSE VERSION)
+  s.files += %w(templates/project/files/htaccess)
   s.files += Dir.glob("lib/**/*.*")
   s.files += Dir.glob("stylesheets/**/*.*")
   s.files += Dir.glob("templates/**/*.*")

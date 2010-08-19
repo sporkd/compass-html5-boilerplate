@@ -1,7 +1,10 @@
 Compass Html5 Boilerplate
 =========================
 
-A compass extension based on HTML5 Boilerplate by Paul Irish.
+HTML5 Boilerplate is a Compass extension based on HTML5 Boilerplate by Paul Irish.
+You can use it to kick-start fully compliant HTML5 applications. Generate either
+stand-alone Compass projects, or Rails applications with fully integrated
+Haml and Sass (scss) templates.
 
 Browse [html5boilerplate.com](http://html5boilerplate.com) for the full workup.
 
@@ -48,7 +51,12 @@ Rails Installation
     config/compass.rb
     config/initializers/compass.rb
 
-Note: If you already have a config/compass.rb file in your project, you may need to
+The Scss files above will get compiled to your Sass compilation dir:
+
+    public/stylesheets/**/style.css
+    public/stylesheets/**/handheld.css
+
+**Note:** If you already have a config/compass.rb file in your project, you may need to
 manually add the following line to the top:
 
     require 'html5-boilerplate'
@@ -59,8 +67,8 @@ If you still have an application.html.erb in your layouts, you will need to loos
 it now so that Rails will use your shiny new application.html.haml layout instead.
 
 The haml will compile to the equivalent of html5-boilerplate's index.html,
-but with all comments stripped out, and some additional rails requirements
-like csrf_meta_tag and flashes.
+but with all comments stripped out, and some additional rails stuff
+like csrf_meta_tags, flashes and the Rails jQuery driver.
 
 This has only been tested on Rails3, but should work fine on Rails2.
 
@@ -102,10 +110,10 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     nginx.conf
     web.config
 
-The SCSS files above will get compiled to the css directory whenever compass is run:
+The SCSS files above will get compiled to your Sass compilation dir:
 
-    css/handheld.css
     css/style.css
+    css/handheld.css
 
 License
 =======
