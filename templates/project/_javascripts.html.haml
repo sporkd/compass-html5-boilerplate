@@ -19,8 +19,8 @@
 = yield :javascripts
 
 -# yui profiler and profileviewer
-- if RAILS_ENV == 'development'
-  = javascript_include_tag 'profiling/yahoo-profiling.min.js', 'profiling/config.js'
+- if Rails.env == 'development'
+  = javascript_include_tag 'profiling/yahoo-profiling.min', 'profiling/config'
 
 -# asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
 -# change the UA-XXXXX-X to be your site's ID
