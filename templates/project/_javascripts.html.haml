@@ -23,13 +23,14 @@
   = javascript_include_tag 'profiling/yahoo-profiling.min', 'profiling/config'
 
 -# asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
--# change the UA-XXXXX-X to be your site's ID
-:javascript
-  var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
-  (function(d, t) {
-   var g = d.createElement(t),
-       s = d.getElementsByTagName(t)[0];
-   g.async = true;
-   g.src = '//www.google-analytics.com/ga.js';
-   s.parentNode.insertBefore(g, s);
-  })(document, 'script');
+-# define a google_account_id helper that returns your site's ID
+- if defined?(google_account_id) && !google_account_id.blank?
+  :javascript
+    var _gaq = [['_setAccount', '#{google_account_id}'], ['_trackPageview']];
+    (function(d, t) {
+     var g = d.createElement(t),
+         s = d.getElementsByTagName(t)[0];
+     g.async = true;
+     g.src = '//www.google-analytics.com/ga.js';
+     s.parentNode.insertBefore(g, s);
+    })(document, 'script');
