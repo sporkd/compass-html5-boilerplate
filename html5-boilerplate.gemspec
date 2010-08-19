@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.version = "0.1.0"
-  s.date = "2010-08-16"
+  s.version = "0.1.1"
+  s.date = "2010-08-18"
 
   s.name = "html5-boilerplate"
   s.authors = ["Peter Gumeson"]
