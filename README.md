@@ -32,6 +32,8 @@ Rails Installation
     public/.htaccess
     public/crossdomain.xml
     public/robots.txt
+    public/apple-touch-icon.png
+    public/favicon.ico
 
     public/javascripts/dd_belatedpng.js
     public/javascripts/jquery-1.4.2.min.js
@@ -76,15 +78,16 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
 
     index.html
     404.html
-    .htaccess
     crossdomain.xml
     robots.txt
+    apple-touch-icon.png
+    favicon.ico
     
     src/style.scss
     src/handheld.scss
-    app/stylesheets/partials/_base.scss
-    app/stylesheets/partials/_html5_boilerplate.scss
-
+    src/partials/_base.scss
+    src/partials/_html5_boilerplate.scss
+    
     js/dd_belatedpng.js
     js/jquery-1.4.2.min.js
     js/modernizr-1.5.min.js
@@ -94,7 +97,10 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     js/profiling/yahoo-profiling.css
     js/profiling/yahoo-profiling.min.js
     
+    .htaccess
     config.rb
+    nginx.conf
+    web.config
 
 The SCSS files above will get compiled to the css directory whenever compass is run:
 

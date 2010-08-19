@@ -12,7 +12,6 @@ $html5-boilerplate-selected-font-color: #fff !default;
 
 $html5-boilerplate-selected-color: #FF5E99 !default;
 
-$html5-boilerplate-selected-font-color: #fff !default;
 
 //
 // minimal base styles
@@ -64,8 +63,7 @@ $html5-boilerplate-selected-font-color: #fff !default;
 
 // Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test
 @mixin accessible-focus {
-  a:active { outline: none; }
-  a:focus { outline: thin dotted; }
+  a:hover, a:active { outline: none; }
 }
 
 @mixin small-font {
@@ -104,13 +102,13 @@ $html5-boilerplate-selected-font-color: #fff !default;
 // No text-shadow: twitter.com/miketaylr/status/12228805301 
 // Also: hot pink.
 @mixin selected-text {
-  ::-moz-selection{ background:$html5-boilerplate-selected-color;color: $html5-boilerplate-selected-font-color; text-shadow: none; }
+  ::-moz-selection{ background:$html5-boilerplate-selected-color; color: $html5-boilerplate-selected-font-color; text-shadow: none; }
   ::selection { background: $html5-boilerplate-selected-color; color: $html5-boilerplate-selected-font-color; text-shadow: none; }
 }
 
 // j.mp/webkit-tap-highlight-color
 @mixin webkit-tap-highlight {
-  a:link { -webkit-tap-highlight-color: #FF5E99; }
+  a:link { -webkit-tap-highlight-color: $html5-boilerplate-selected-color; }
 }
 
 // always force a scrollbar in non-IE

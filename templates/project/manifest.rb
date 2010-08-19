@@ -13,6 +13,7 @@ if Compass.configuration.project_type == :rails
   file '_header.html.haml', :to => 'app/views/layouts/_header.html.haml'
   file '_javascripts.html.haml', :to => 'app/views/layouts/_javascripts.html.haml'
   file '_stylesheets.html.haml', :to => 'app/views/layouts/_stylesheets.html.haml'
+  file 'files/nginx.conf', :to => 'config/nginx.conf'
   javascript 'javascripts/dd_belatedpng.js', :to => 'dd_belatedpng.js'
   javascript 'javascripts/jquery-1.4.2.min.js', :to => 'jquery-1.4.2.min.js'
   javascript 'javascripts/modernizr-1.5.min.js', :to => 'modernizr-1.5.min.js'
@@ -24,6 +25,8 @@ if Compass.configuration.project_type == :rails
   javascript 'javascripts/profiling/yahoo-profiling.min.js', :to => 'profiling/yahoo-profiling.min.js'
 else
   html 'index.html.haml'
+  file 'files/nginx.conf', :to => 'nginx.conf'
+  file 'files/web.config', :to => 'web.config'
   javascript 'javascripts/dd_belatedpng.js', :to => 'dd_belatedpng.js'
   javascript 'javascripts/jquery-1.4.2.min.js', :to => 'jquery-1.4.2.min.js'
   javascript 'javascripts/modernizr-1.5.min.js', :to => 'modernizr-1.5.min.js'
@@ -33,11 +36,12 @@ else
   javascript 'javascripts/profiling/yahoo-profiling.css', :to => 'profiling/yahoo-profiling.css'
   javascript 'javascripts/profiling/yahoo-profiling.min.js', :to => 'profiling/yahoo-profiling.min.js'
 end
-html 'public/404.html', :to => '404.html'
-html 'public/htaccess.conf', :to => '.htaccess'
-html 'public/crossdomain.xml', :to => 'crossdomain.xml'
-html 'public/robots.txt', :to => 'robots.txt'
-file 'nginx.conf'
+html 'files/404.html', :to => '404.html'
+html 'files/htaccess.conf', :to => '.htaccess'
+html 'files/crossdomain.xml', :to => 'crossdomain.xml'
+html 'files/robots.txt', :to => 'robots.txt'
+html 'files/apple-touch-icon.png', :to => 'apple-touch-icon.png'
+html 'files/favicon.ico', :to => 'favicon.ico'
 
 help %Q{
 This is a Compass extention for HTML5 Boilerplate by Paul Irish
