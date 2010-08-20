@@ -13,7 +13,7 @@
 //--------------------------------
 // Page
 //--------------------------------
-body, select, input, textarea { color: $html5-boilerplate-font-color; }
+body, select, input, textarea { color: $font-color; }
 
 h1,h2,h3,h4,h5,h6 { @include bold-font; }
 
@@ -22,8 +22,8 @@ html {
   @include force-scrollbar;
 }
 
-a, a:active, a:visited { color: $html5-boilerplate-link-color; }
-a:hover { color: $html5-boilerplate-link-hover-color; }
+a, a:active, a:visited { color: $link-color; }
+a:hover { color: $link-hover-color; }
 
 ul { margin-left: 30px; }
 ol { margin-left: 30px; list-style-type: decimal; }
