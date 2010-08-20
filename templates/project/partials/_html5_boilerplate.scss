@@ -15,7 +15,7 @@
 //--------------------------------
 body, select, input, textarea { color: $font-color; }
 
-h1,h2,h3,h4,h5,h6 { @include bold-font; }
+h1, h2, h3, h4, h5, h6 { @include bold-font; }
 
 html {
   @include font-smoothing;
@@ -43,6 +43,8 @@ sup { vertical-align: super; font-size: smaller; }
 @include align-input-labels;
 
 @include hand-cursor-inputs;
+
+@include input-validation;
 
 @include selected-text;
 

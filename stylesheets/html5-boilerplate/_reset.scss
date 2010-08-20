@@ -35,7 +35,7 @@
   }                  
 
   article, aside, details, figcaption, figure,
-  footer, header, hgroup, menu, nav, section, summary { 
+  footer, header, hgroup, menu, nav, section { 
       display:block;
   }
 
@@ -54,7 +54,7 @@
 
   del { text-decoration: line-through; }
 
-  abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+  abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
 
   //
   // tables still need cellspacing="0" in the markup

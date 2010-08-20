@@ -12,6 +12,12 @@ $selected-font-color: #fff !default;
 
 $selected-background-color: #FF5E99 !default;
 
+$selected-background-color: #FF5E99 !default;
+
+$valid-input-background-color: #ddf0dd !default;
+
+$invalid-input-background-color: #f0dddd !default;
+
 
 //
 // minimal base styles
@@ -20,7 +26,7 @@ $selected-background-color: #FF5E99 !default;
 @mixin html5-boilerplate-page {
   body, select, input, textarea { color: $font-color; }
 
-  h1,h2,h3,h4,h5,h6 { @include bold-font; }
+  h1, h2, h3, h4, h5, h6 { @include bold-font; }
 
   html {
     @include font-smoothing;
@@ -48,6 +54,8 @@ $selected-background-color: #FF5E99 !default;
   @include align-input-labels;
 
   @include hand-cursor-inputs;
+  
+  @include input-validation;
 
   @include selected-text;
 
@@ -89,13 +97,20 @@ $selected-background-color: #FF5E99 !default;
 // by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css
 @mixin align-input-labels {
   input[type="radio"] { vertical-align: text-bottom; }
-  input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+  input[type="checkbox"] { vertical-align: bottom; }
+  .ie7 input[type="checkbox"] { vertical-align: baseline; }
   .ie6 input { vertical-align: text-bottom; }
 }
 
 // hand cursor on clickable input elements
 @mixin hand-cursor-inputs {
   label, input[type=button], input[type=submit], button { cursor: pointer; }
+}
+
+/* colors for form validity */
+@mixin input-validation {
+  input:invalid { background-color: $invalid-input-background-color; }
+  input:valid   { background-color: $valid-input-background-color; }
 }
 
 // These selection declarations have to be separate.
