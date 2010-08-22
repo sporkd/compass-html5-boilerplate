@@ -12,10 +12,12 @@
     <!--<![endif]-->
     #container
       %header#header
+        = render :partial => 'layouts/header'
       #main
         = render :partial => 'layouts/flashes'
         = yield
       %footer#footer
-      
+        = render :partial => 'layouts/footer'
+
     -# Javascript at the bottom for fast page loading
     = render :partial => 'layouts/javascripts'
