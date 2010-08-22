@@ -14,7 +14,7 @@
 
 // for image replacement
 @mixin image-replacement {
-  display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left;
+  display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr;
 }
 
 // Hide for both screenreaders and browsers
