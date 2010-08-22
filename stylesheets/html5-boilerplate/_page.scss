@@ -107,7 +107,7 @@ $invalid-input-background-color: #f0dddd !default;
   label, input[type=button], input[type=submit], button { cursor: pointer; }
 }
 
-/* colors for form validity */
+// colors for form validity
 @mixin input-validation {
   input:invalid { background-color: $invalid-input-background-color; }
   input:valid   { background-color: $valid-input-background-color; }
