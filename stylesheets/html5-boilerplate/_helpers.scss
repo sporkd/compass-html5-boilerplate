@@ -9,7 +9,7 @@
 
   .visuallyhidden { @include visually-hidden; }
 
-  @include magnificent-clearfix;
+  @include clearfix;
 }
 
 // for image replacement
@@ -37,7 +37,9 @@
 @mixin invisible { visibility: hidden; }
 
 // The Magnificent CLEARFIX
-@mixin magnificent-clearfix($classname: 'clearfix') {
-  .#{$classname}:after  { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-  .#{$classname} { zoom: 1; }
+// Make any element or classname a
+// clearfix by passing in a selector
+@mixin clearfix($selector: '.clearfix') {
+  #{$selector}:after  { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+  #{$selector} { zoom: 1; }
 }
