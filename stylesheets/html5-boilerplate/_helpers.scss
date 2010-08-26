@@ -2,6 +2,8 @@
 // Non-semantic helper classes
 //
 
+@import "compass/utilities/text/replacement";
+
 @mixin html5-boilerplate-helpers {
   .ir { @include image-replacement; }
 
@@ -13,8 +15,20 @@
 }
 
 // for image replacement
-@mixin image-replacement {
-  display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr;
+@mixin image-replacement($img: none, $x: 50%, $y: 50%) {
+  @include hide-text;
+  direction: ltr;
+  background-repeat: no-repeat;
+  @if $img != none {
+    background-image: image-url($img);
+    background-position: $x $y;
+  }
+}
+
+@mixin sized-image-replacement($img, $x: 50%, $y: 50%) {
+  @include image-replacement($img, $x, $y);
+  width: image-width($img);
+  height: image-height($img);
 }
 
 // Hide for both screenreaders and browsers
