@@ -36,6 +36,13 @@ td, td img { vertical-align: top; }
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
 
+input:valid {
+  @include valid-input;
+}
+input:invalid {
+  @include invalid-input;
+}
+
 @include accessible-focus;
 
 @include quoted-pre;
@@ -43,8 +50,6 @@ sup { vertical-align: super; font-size: smaller; }
 @include align-input-labels;
 
 @include hand-cursor-inputs;
-
-@include input-validation;
 
 @include selected-text;
 

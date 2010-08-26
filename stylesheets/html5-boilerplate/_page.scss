@@ -10,13 +10,19 @@ $link-visited-color: #607890 !default;
 
 $selected-font-color: #fff !default;
 
-$selected-background-color: #FF5E99 !default;
+$selected-background-color: #ff5e99 !default;
 
-$selected-background-color: #FF5E99 !default;
+$selected-background-color: #ff5e99 !default;
 
 $valid-input-background-color: #ddf0dd !default;
 
 $invalid-input-background-color: #f0dddd !default;
+
+$invalid-input-shadow-color: red !default;
+
+
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
 
 
 //
@@ -47,6 +53,13 @@ $invalid-input-background-color: #f0dddd !default;
   sub { vertical-align: sub; font-size: smaller; }
   sup { vertical-align: super; font-size: smaller; }
 
+  input:valid {
+    @include valid-input;
+  }
+  input:invalid {
+    @include invalid-input;
+  }
+
   @include accessible-focus;
 
   @include quoted-pre;
@@ -54,8 +67,6 @@ $invalid-input-background-color: #f0dddd !default;
   @include align-input-labels;
 
   @include hand-cursor-inputs;
-  
-  @include input-validation;
 
   @include selected-text;
 
@@ -108,9 +119,11 @@ $invalid-input-background-color: #f0dddd !default;
 }
 
 // colors for form validity
-@mixin input-validation {
-  input:invalid { background-color: $invalid-input-background-color; }
-  input:valid   { background-color: $valid-input-background-color; }
+@mixin valid-input {
+}
+@mixin invalid-input {
+  @include border-radius(1px);
+  @include box-shadow($invalid-input-shadow-color, 0, 0, 5px, 0);
 }
 
 // These selection declarations have to be separate.
