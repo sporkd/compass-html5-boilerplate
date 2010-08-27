@@ -67,9 +67,9 @@ input:invalid {
 
 .visuallyhidden { @include visually-hidden; }
 
-// Make any element or classname behave as
-// clearfix by passing in a selector
-@include clearfix('.clearfix');
+.clearfix {
+  @include pie-clearfix; // Already defined by compass
+}
 
 
 //--------------------------------

@@ -3,6 +3,7 @@
 //
 
 @import "compass/utilities/text/replacement";
+@import "compass/utilities/general/clearfix";
 
 @mixin html5-boilerplate-helpers {
   .ir { @include image-replacement; }
@@ -11,7 +12,7 @@
 
   .visuallyhidden { @include visually-hidden; }
 
-  @include clearfix;
+  .clearfix { @include pie-clearfix; }
 }
 
 // for image replacement
@@ -51,9 +52,5 @@
 @mixin invisible { visibility: hidden; }
 
 // The Magnificent CLEARFIX
-// Make any element or classname a
-// clearfix by passing in a selector
-@mixin clearfix($selector: '.clearfix') {
-  #{$selector}:after  { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-  #{$selector} { zoom: 1; }
-}
+// Now using pie-clearfix from Compass
+// since it's exactly the same
