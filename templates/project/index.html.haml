@@ -1,4 +1,4 @@
-!!!
+!!! 5
 %html.no-js{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}/
@@ -14,17 +14,12 @@
     %meta{:content => "", :name => "description"}/
     %meta{:content => "", :name => "author"}/
     
-    -#
-      Mobile Viewport Fix
-      j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
-      device-width : Occupy full width of the screen in its current orientation
-      initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-      maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
-    %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;", :name => "viewport"}/
+    -# Mobile viewport optimized: j.mp/bplateviewport
+    %meta{:content => "width=device-width; initial-scale=1.0", :name => "viewport"}/
     
     -# Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references
-    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
-    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    -# %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    -# %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
     
     -# CSS : implied media="all"
     %link{:href => "css/style.css?v=1", :media => "all", :rel => "stylesheet"}/
@@ -73,7 +68,7 @@
        var g = d.createElement(t),
            s = d.getElementsByTagName(t)[0];
        g.async = true;
-       g.src = '//www.google-analytics.com/ga.js';
+       g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
        s.parentNode.insertBefore(g, s);
       })(document, 'script');
-  
+

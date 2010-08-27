@@ -15,7 +15,8 @@
   .clearfix { @include pie-clearfix; }
 }
 
-// for image replacement
+// Almost the same as compass replace-text
+// but adding direction: ltr
 @mixin image-replacement($img: none, $x: 50%, $y: 50%) {
   @include hide-text;
   direction: ltr;
