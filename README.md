@@ -29,7 +29,8 @@ Rails Installation
     app/stylesheets/style.scss
     app/stylesheets/handheld.scss
     app/stylesheets/partials/_base.scss
-    app/stylesheets/partials/_html5_boilerplate.scss
+    app/stylesheets/partials/_example.scss
+    app/stylesheets/partials/_page.scss
     
     public/404.html
     public/.htaccess
@@ -94,7 +95,8 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     src/style.scss
     src/handheld.scss
     src/partials/_base.scss
-    src/partials/_html5_boilerplate.scss
+    src/partials/_example.scss
+    src/partials/_page.scss
     
     js/dd_belatedpng.js
     js/jquery-1.4.2.min.js
