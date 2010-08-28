@@ -1,0 +1,41 @@
+@import "compass/css3";
+
+//------------------------------------------
+// These html5-boilerplate styles should be
+// customized for each site
+//-----------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  // This might not be the best choice if you are
+  // embedding font faces that are already bold
+  font-weight: bold;
+}
+
+strong, th {
+  font-weight: bold;
+}
+
+small {
+  @include font-size(11px);  // 85% when $base-font-size eq 13px
+}
+
+// Used by the 'required' attribute on inputs
+input:valid {}
+input:invalid {
+  @include border-radius(1px);
+  @include box-shadow(red, 0, 0, 5px, 0);
+}
+
+//------------------------------------------
+// Add more of your own custom styles
+//-----------------------------------------
+
+body {}
+
+#container {}
+
+header {}
+
+#main {}
+
+footer {}

@@ -1,63 +1,32 @@
 $font-color: #444 !default;  //looks better than black: twitter.com/H_FJ/statuses/11800719859
-
 $link-color: #607890 !default;
-
 $link-hover-color: #036 !default;
-
 $link-active-color: #607890 !default;
-
 $link-visited-color: #607890 !default;
-
 $selected-font-color: #fff !default;
-
 $selected-background-color: #ff5e99 !default;
-
-$selected-background-color: #ff5e99 !default;
-
-$valid-input-background-color: #ddf0dd !default;
-
-$invalid-input-background-color: #f0dddd !default;
-
-$invalid-input-shadow-color: red !default;
-
-
-@import "compass/css3/border-radius";
-@import "compass/css3/box-shadow";
-
+$list-left-margin: 1.8em !default;
 
 //
-// minimal base styles
+// Minimal base styles
 //
 
-@mixin html5-boilerplate-page {
+@mixin html5-boilerplate-base {
   body, select, input, textarea { color: $font-color; }
 
-  h1, h2, h3, h4, h5, h6 { @include bold-font; }
-
-  html {
-    @include force-scrollbar;
-  }
+  html { @include force-scrollbar; }
 
   a, a:active, a:visited { color: $link-color; }
   a:hover { color: $link-hover-color; }
 
-  ul, ol { margin-left: 1.8em; }
+  ul, ol { margin-left: $list-left-margin; }
   ol { list-style-type: decimal; }
-
-  small { @include small-font; }
-  strong, th { @include bold-font; }
 
   td, td img { vertical-align: top; }
 
-  sub { vertical-align: sub; font-size: smaller; }
-  sup { vertical-align: super; font-size: smaller; }
-
-  input:valid {
-    @include valid-input;
-  }
-  input:invalid {
-    @include invalid-input;
-  }
+  sub { @include sub; }
+  
+  sup { @include sup; }
 
   @include accessible-focus;
 
@@ -74,22 +43,17 @@ $invalid-input-shadow-color: red !default;
   @include ie-hacks;
 }
 
-// maxvoltar.com/archive/-webkit-font-smoothing
-@mixin font-smoothing {
-  -webkit-font-smoothing: antialiased;
+@mixin sub{ 
+  vertical-align: sub; font-size: smaller;
+}
+
+@mixin sup{ 
+  vertical-align: super; font-size: smaller;
 }
 
 // Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test
 @mixin accessible-focus {
   a:hover, a:active { outline: none; }
-}
-
-@mixin small-font {
-  font-size: 85%;
-}
-
-@mixin bold-font {
-  font-weight: bold;
 }
 
 // www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/
@@ -115,14 +79,6 @@ $invalid-input-shadow-color: red !default;
 // hand cursor on clickable input elements
 @mixin hand-cursor-inputs {
   label, input[type=button], input[type=submit], button { cursor: pointer; }
-}
-
-// colors for form validity
-@mixin valid-input {
-}
-@mixin invalid-input {
-  @include border-radius(1px);
-  @include box-shadow($invalid-input-shadow-color, 0, 0, 5px, 0);
 }
 
 // These selection declarations have to be separate.

@@ -1,46 +1,33 @@
 //--------------------------------
-// Reset
+// CSS Reset
 //--------------------------------
 @include html5-boilerplate-reset;
 
 
 //--------------------------------
-// Fonts
+// Base Fonts
 //--------------------------------
-@include html5-boilerplate-fonts;
+@include html5-boilerplate-fonts($base-font-family, $base-font-size, $base-line-height);
 
 
 //--------------------------------
-// Page
+// Minimal Base Styles
 //--------------------------------
 body, select, input, textarea { color: $font-color; }
 
-h1, h2, h3, h4, h5, h6 { @include bold-font; }
-
-html {
-  @include force-scrollbar;
-}
+html { @include force-scrollbar; }
 
 a, a:active, a:visited { color: $link-color; }
 a:hover { color: $link-hover-color; }
 
-ul { margin-left: 30px; }
-ol { margin-left: 30px; list-style-type: decimal; }
-
-small { @include small-font; }
-strong, th { @include bold-font; }
+ul, ol { margin-left: $list-left-margin; }
+ol { list-style-type: decimal; }
 
 td, td img { vertical-align: top; }
 
-sub { vertical-align: sub; font-size: smaller; }
-sup { vertical-align: super; font-size: smaller; }
+sub { @include sub; }
 
-input:valid {
-  @include valid-input;
-}
-input:invalid {
-  @include invalid-input;
-}
+sup { @include sup; }
 
 @include accessible-focus;
 

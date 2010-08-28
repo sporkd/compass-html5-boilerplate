@@ -1,4 +1,10 @@
-// This file must be imported before html5-boilerplate/page
+// This file must be imported before loading html5-boilerplate
+
+$base-font-family: unquote('sans-serif');
+
+$base-font-size: 13px;
+
+$base-line-height: 1.231;
 
 $font-color: #444;
 
@@ -14,8 +20,4 @@ $selected-font-color: #fff;
 
 $selected-background-color: #FF5E99;
 
-$valid-input-background-color: #ddf0dd;
-
-$invalid-input-background-color: #f0dddd;
-
-$invalid-input-shadow-color: red;
+$list-left-margin: 1.8em;

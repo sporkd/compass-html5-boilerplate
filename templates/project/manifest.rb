@@ -3,7 +3,8 @@ description "Compass extention for HTML5 Boilerplate located at http://html5boil
 stylesheet 'style.scss', :media => 'screen, projection'
 stylesheet 'handheld.scss', :media => 'handheld'
 stylesheet 'partials/_base.scss'
-stylesheet 'partials/_html5_boilerplate.scss'
+stylesheet 'partials/_example.scss'
+stylesheet 'partials/_page.scss'
 
 if Compass.configuration.project_type == :rails
   file 'application.html.haml', :to => 'app/views/layouts/application.html.haml'
