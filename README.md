@@ -3,7 +3,7 @@ Compass Html5 Boilerplate
 
 HTML5 Boilerplate is a Compass extension based on HTML5 Boilerplate by Paul Irish.
 You can use it to kick-start fully compliant HTML5 applications. Generate either
-stand-alone Compass projects, or Rails applications with fully integrated
+stand-alone HTML5 projects, or Rails applications with fully integrated HTML5
 Haml and Sass (Scss) templates.
 
 Browse [html5boilerplate.com](http://html5boilerplate.com) for the full workup.
@@ -28,7 +28,7 @@ Rails Installation
     
     app/stylesheets/style.scss
     app/stylesheets/handheld.scss
-    app/stylesheets/partials/_base.scss
+    app/stylesheets/partials/_defaults.scss
     app/stylesheets/partials/_example.scss
     app/stylesheets/partials/_page.scss
     
@@ -94,7 +94,7 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     
     src/style.scss
     src/handheld.scss
-    src/partials/_base.scss
+    src/partials/_defaults.scss
     src/partials/_example.scss
     src/partials/_page.scss
     
