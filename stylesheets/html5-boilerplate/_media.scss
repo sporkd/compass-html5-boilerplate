@@ -12,7 +12,7 @@
   }
 
   @media screen and (max-device-width: 480px) {
-    @include media-mobile(false);
+    @include media-mobile;
   }
 }
 
@@ -60,6 +60,7 @@
 @mixin media-mobile($optimize: true) {
   // j.mp/textsizeadjust
   @if not $optimize {
+    // don't allow iOS and WinMobile to mobile-optimize text
     html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
   }
 }
