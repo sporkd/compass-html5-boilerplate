@@ -51,6 +51,8 @@ Rails Installation
     
     config/compass.rb
     config/initializers/compass.rb
+    config/google.yml
+    config/nginx.conf
 
 The Scss files above will automatically get compiled to your Sass compilation directory:
 

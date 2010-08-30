@@ -1,5 +1,6 @@
 -# Grab Google CDN's jQuery
-- if defined?(google_api_key) && !google_api_key.blank?
+-# Looks for google_api_key first in ENV['GOOGLE_API_KEY'] then in config/google.yml
+- if !google_api_key.blank?
   = javascript_include_tag "http://www.google.com/jsapi?key=#{google_api_key}"
   :javascript
     google.load("jquery", "1.4.2");
@@ -23,14 +24,13 @@
   = javascript_include_tag 'profiling/yahoo-profiling.min', 'profiling/config'
 
 -# asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
--# define a google_account_id helper that returns your site's ID
-- if defined?(google_account_id) && !google_account_id.blank?
-  :javascript
-    var _gaq = [['_setAccount', '#{google_account_id}'], ['_trackPageview']];
-    (function(d, t) {
-     var g = d.createElement(t),
-         s = d.getElementsByTagName(t)[0];
-     g.async = true;
-     g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     s.parentNode.insertBefore(g, s);
-    })(document, 'script');
+-# Looks for google_account_id first in ENV['GOOGLE_ACCOUNT_ID'] then in config/google.yml
+:javascript
+  var _gaq = [['_setAccount', '#{google_account_id}'], ['_trackPageview']];
+  (function(d, t) {
+   var g = d.createElement(t),
+       s = d.getElementsByTagName(t)[0];
+   g.async = true;
+   g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   s.parentNode.insertBefore(g, s);
+  })(document, 'script');

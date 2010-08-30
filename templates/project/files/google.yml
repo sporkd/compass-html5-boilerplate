@@ -1,0 +1,18 @@
+# Html5BoilerplateHelper will first check your ENV
+# for each key before using the these yml values
+# e.g. ENV['GOOGLE_ACCOUNT_ID'] || :google_account_id
+defaults: &defaults
+  :google_account_id: 'UA-XXXXX-X'  # ENV['GOOGLE_ACCOUNT_ID']
+  :google_api_key: ''               # ENV['GOOGLE_API_KEY']
+
+:development:
+  <<: *defaults
+
+:test:
+  <<: *defaults
+
+:staging:
+  <<: *defaults
+
+:production:
+  <<: *defaults

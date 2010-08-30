@@ -14,6 +14,7 @@ if Compass.configuration.project_type == :rails
   file '_header.html.haml', :to => 'app/views/layouts/_header.html.haml'
   file '_javascripts.html.haml', :to => 'app/views/layouts/_javascripts.html.haml'
   file '_stylesheets.html.haml', :to => 'app/views/layouts/_stylesheets.html.haml'
+  file 'files/google.yml', :to => 'config/google.yml'
   file 'files/nginx.conf', :to => 'config/nginx.conf'
   javascript 'javascripts/dd_belatedpng.js', :to => 'dd_belatedpng.js'
   javascript 'javascripts/jquery-1.4.2.min.js', :to => 'jquery-1.4.2.min.js'
