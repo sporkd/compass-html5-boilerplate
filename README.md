@@ -73,6 +73,9 @@ The haml will compile to the equivalent of html5-boilerplate's index.html,
 but with all comments stripped out, and some additional rails stuff
 like csrf_meta_tags, flashes and the Rails jQuery driver.
 
+You can define your own Google Analytics Account ID and Google API Key in
+config/google.yml or as ENV variables. See code for comments.
+
 This extension has only been tested on Rails3.
 
 
