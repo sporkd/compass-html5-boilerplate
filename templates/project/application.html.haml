@@ -1,15 +1,14 @@
 !!! 5
+-#
+  Use the ie_html tag below instead of the %html tag if you prefer
+  the IE conditionals on the HTML tag instead of the body tag
+  http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
+  
+-# ie_html :lang => 'en', :class => 'no-js' do
 %html.no-js{:lang => "en"}
   = render :partial => 'layouts/head'
-
-  -# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-  <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
-  <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
-  <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
-  <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
-  <!--[if (gt IE 9)|!(IE)]><!-->
-  %body
-    <!--<![endif]-->
+  
+  - ie_body :class => "#{controller.controller_name}" do
     #container
       %header#header
         = render :partial => 'layouts/header'
@@ -18,6 +17,6 @@
         = yield
       %footer#footer
         = render :partial => 'layouts/footer'
-
+        
     -# Javascript at the bottom for fast page loading
     = render :partial => 'layouts/javascripts'

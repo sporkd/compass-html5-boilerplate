@@ -73,7 +73,7 @@ The haml will compile to the equivalent of html5-boilerplate's index.html,
 but with all comments stripped out, and some additional rails stuff
 like csrf_meta_tags, flashes and the Rails jQuery driver.
 
-This has only been tested on Rails3, but should work fine on Rails2.
+This extension has only been tested on Rails3.
 
 
 Stand Alone Installation
