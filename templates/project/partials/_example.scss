@@ -54,7 +54,7 @@ sup { @include sup; }
 .visuallyhidden { @include visually-hidden; }
 
 .clearfix {
-  @include pie-clearfix; // Already defined by compass
+  @include pie-clearfix;  // defined by compass core
 }
 
 

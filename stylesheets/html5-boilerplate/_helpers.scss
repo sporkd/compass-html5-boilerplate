@@ -1,9 +1,10 @@
-//
-// Non-semantic helper classes
-//
-
 @import "compass/utilities/text/replacement";
 @import "compass/utilities/general/clearfix";
+
+//
+// Non-semantic helper classes
+// It's better to include these mixins in your own styles
+//
 
 @mixin html5-boilerplate-helpers {
   .ir { @include image-replacement; }
@@ -53,5 +54,7 @@
 @mixin invisible { visibility: hidden; }
 
 // The Magnificent CLEARFIX
-// Now using pie-clearfix from Compass
-// since it's exactly the same
+@mixin magnificent-clearfix {
+  @warn "The 'magnificent-clearfix' mixin has been deprecated. Use 'pie-clearfix' in compass core instead.";
+  @include pie-clearfix;
+}
