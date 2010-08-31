@@ -28,7 +28,7 @@ Rails Installation
     
     app/stylesheets/style.scss
     app/stylesheets/handheld.scss
-    app/stylesheets/partials/_defaults.scss
+    app/stylesheets/partials/_base.scss
     app/stylesheets/partials/_example.scss
     app/stylesheets/partials/_page.scss
     
@@ -73,8 +73,8 @@ The haml will compile to the equivalent of html5-boilerplate's index.html,
 but with all comments stripped out, and some additional rails stuff
 like csrf_meta_tags, flashes and the Rails jQuery driver.
 
-You can define your own Google Analytics Account ID and Google API Key in
-config/google.yml or as ENV variables. See code for comments.
+You can set your own Google Analytics Account ID and your Google API Key
+either as ENV variables, or inside config/google.yml.
 
 This extension has only been tested on Rails3.
 
@@ -99,7 +99,7 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     
     src/style.scss
     src/handheld.scss
-    src/partials/_defaults.scss
+    src/partials/_base.scss
     src/partials/_example.scss
     src/partials/_page.scss
     

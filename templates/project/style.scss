@@ -1,8 +1,7 @@
 // First, set some default constants
-// to be used by html5-boilerplate
-@import "partials/defaults";
+@import "partials/base";
 
-// Then, we'll import the compass extension
+// Then we'll import the compass extension
 @import "html5-boilerplate";
 
 // Now you can choose to include the whole
@@ -13,7 +12,7 @@
 // sections you want to include
 //@include html5-boilerplate-reset;
 //@include html5-boilerplate-fonts;
-//@include html5-boilerplate-base;
+//@include html5-boilerplate-styles;
 //@include html5-boilerplate-helpers;
 //@include html5-boilerplate-media;
 

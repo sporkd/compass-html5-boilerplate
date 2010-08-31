@@ -2,7 +2,7 @@ description "Compass extention for HTML5 Boilerplate located at http://html5boil
 
 stylesheet 'style.scss', :media => 'all'
 stylesheet 'handheld.scss', :media => 'handheld'
-stylesheet 'partials/_defaults.scss'
+stylesheet 'partials/_base.scss'
 stylesheet 'partials/_example.scss'
 stylesheet 'partials/_page.scss'
 

@@ -11,7 +11,7 @@ $list-left-margin: 1.8em !default;
 // Minimal base styles
 //
 
-@mixin html5-boilerplate-base {
+@mixin html5-boilerplate-styles {
   body, select, input, textarea { color: $font-color; }
 
   html { @include force-scrollbar; }

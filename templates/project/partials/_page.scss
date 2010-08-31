@@ -6,7 +6,7 @@
 //-----------------------------------------------
 
 h1, h2, h3, h4, h5, h6 {
-  // This might not be the best choice if you are
+  // Bold might not be the best choice if you are
   // embedding font faces that are already bold
   font-weight: bold;
 }
@@ -16,7 +16,9 @@ strong, th {
 }
 
 small {
-  @include font-size(11px);  // This is approx 85%
+  // Use font-size mixin to convert to percentage for YUI
+  // http://developer.yahoo.com/yui/3/cssfonts/#fontsize
+  @include font-size(11px);  // approx 85% when base-font-size eq 13px
 }
 
 // Add the 'required' attribute on your
