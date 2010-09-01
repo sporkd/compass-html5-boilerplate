@@ -23,11 +23,11 @@ module Html5BoilerplateHelper
   end
 
   def google_account_id
-    ENV['GOOGLE_ACCOUNT_ID'] || google_config(:google_account_id) || ''
+    ENV['GOOGLE_ACCOUNT_ID'] || google_config(:google_account_id)
   end
 
   def google_api_key
-    ENV['GOOGLE_API_KEY'] || google_config(:google_api_key) || ''
+    ENV['GOOGLE_API_KEY'] || google_config(:google_api_key)
   end
 
 private
