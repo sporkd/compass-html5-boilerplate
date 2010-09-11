@@ -1,1 +1,8 @@
-@import "html5-boilerplate/handheld";
+* {
+  float: none;       // Screens are not big enough to account for floats
+  background: #fff;  // As much contrast as possible */
+  color: #000;
+}
+
+// Slightly reducing font size to reduce need to scroll
+body { font-size: 80%; }
