@@ -15,7 +15,9 @@
 
 /[if lt IE 7 ]
   = javascript_include_tag 'dd_belatedpng'
-  
+  :javascript
+    DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images
+    
 -#  Append your own using content_for :javascripts
 = yield :javascripts
 

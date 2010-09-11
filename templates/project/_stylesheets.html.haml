@@ -1,6 +1,8 @@
 -# CSS : implied media="all"
 = stylesheet_link_tag 'style', :media => 'all'
--# For the less-enabled mobile browsers like Opera Mini
-= stylesheet_link_tag 'handheld', :media => 'handheld'
+
+-# Uncomment if you are specifically targeting less enabled mobile browsers
+-#= stylesheet_link_tag 'handheld', :media => 'handheld'
+
 -# Append your own using content_for :stylesheets
 = yield :stylesheets

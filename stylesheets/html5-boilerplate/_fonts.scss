@@ -5,9 +5,10 @@ $base-line-height: 1.231 !default;
 //
 // fonts.css from the YUI Library: developer.yahoo.com/yui/fonts
 //
-// There are two custom edits:
+// There are three custom edits:
 // * remove arial, helvetica from explicit font stack
 // * we normalize monospace styles ourselves
+// * table font-size is reset in the HTML5 reset above so there is no need to repeat
 //
 // Whatever parts of this port of YUI to Sass that are copyrightable, are Copyright (c) 2008, Christopher Eppstein. All Rights Reserved.
 //
@@ -19,8 +20,6 @@ $base-line-height: 1.231 !default;
     line-height: $line-height; // hack retained to preserve specificity
     *font-size: small;
   }
-
-  table { font-size: inherit; font: 100%; }
 
   select, input, textarea, button { font: 99% $family; }
 

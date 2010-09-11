@@ -53,7 +53,7 @@
 // Hide visually and from screenreaders, but maintain layout
 @mixin invisible { visibility: hidden; }
 
-// The Magnificent CLEARFIX
+// The Magnificent CLEARFIX << j.mp/phayesclearfix
 @mixin magnificent-clearfix {
   @warn "The 'magnificent-clearfix' mixin has been deprecated. Use 'pie-clearfix' in compass core instead.";
   @include pie-clearfix;
