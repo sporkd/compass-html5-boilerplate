@@ -48,5 +48,5 @@ $base-line-height: 1.231 !default;
 //
 // For more information see the table found at http://developer.yahoo.com/yui/3/cssfonts/#fontsize
 @mixin font-size($size, $base-font-size: $base-font-size) {
-  font-size: percentage($size / $base-font-size);
+  font-size: ceil(percentage($size / $base-font-size));
 }
