@@ -9,7 +9,7 @@
 
 -# fall back to local jQuery if necessary
 :javascript
-  !window.jQuery && document.write('#{ escape_javascript(javascript_include_tag "jquery-1.4.2.min") }')
+  !window.jQuery && document.write(unescape('%3Cscript src="/javascripts/jquery-1.4.2.min.js"%3E%3C/script%3E'))
   
 = javascript_include_tag 'rails', 'plugins', 'application'
 
