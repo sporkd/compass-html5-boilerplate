@@ -41,7 +41,7 @@ Rails Installation
 
     public/javascripts/dd_belatedpng.js
     public/javascripts/jquery-1.4.2.min.js
-    public/javascripts/modernizr-1.5.min.js
+    public/javascripts/modernizr-1.6.min.js
     public/javascripts/plugins.js
     public/javascripts/rails.js
     public/javascripts/profiling/charts.swf
@@ -53,6 +53,7 @@ Rails Installation
     config/initializers/compass.rb
     config/google.yml
     config/nginx.conf
+    config/mime.types
 
 The Scss files above will automatically get compiled to your Sass compilation directory:
 
@@ -105,7 +106,7 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     
     js/dd_belatedpng.js
     js/jquery-1.4.2.min.js
-    js/modernizr-1.5.min.js
+    js/modernizr-1.6.min.js
     js/plugins.js
     js/profiling/charts.swf
     js/profiling/config.js
@@ -115,6 +116,7 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     .htaccess
     config.rb
     nginx.conf
+    mime.types
     web.config
 
 Run `compass watch my_project` and the SCSS files above will automatically

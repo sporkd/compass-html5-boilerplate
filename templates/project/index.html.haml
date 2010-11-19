@@ -4,7 +4,7 @@
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
+<!--[if (gte IE 9)|!(IE)]><!-->
 %html.no-js{ :lang => "en" }
   <!--<![endif]-->
   %head
@@ -15,12 +15,17 @@
       Remove this if you use the .htaccess
     %meta{ :content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible" }/
     
+    -# encoding must be specified within the first 512 bytes www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset
+    
+    -# meta element for compatibility mode needs to be before all elements except title & meta msdn.microsoft.com/en-us/library/cc288325(VS.85).aspx
+    -# Chrome Frame is only invoked if meta element for compatibility mode is within the first 1K bytes code.google.com/p/chromium/issues/detail?id=23003
+    
     %title
     %meta{ :content => "", :name => "description" }/
     %meta{ :content => "", :name => "author" }/
     
     -# Mobile viewport optimized: j.mp/bplateviewport
-    %meta{ :content => "width=device-width; initial-scale=1.0", :name => "viewport" }/
+    %meta{ :content => "width=device-width, initial-scale=1.0", :name => "viewport" }/
     
     -# Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references
     -# %link{ :href => "/favicon.ico", :rel => "shortcut icon" }/
@@ -33,7 +38,7 @@
     -# %link{ :href => "css/handheld.css?v=1", :media => "handheld", :rel => "stylesheet" }/
     
     -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
-    %script{ :src => "js/modernizr-1.5.min.js" }
+    %script{ :src => "js/modernizr-1.6.min.js" }
     
   %body
     #container

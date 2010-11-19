@@ -1,11 +1,11 @@
 -# Grab Google CDN's jQuery
 -# Looks for google_api_key first in ENV['GOOGLE_API_KEY'] then in config/google.yml
 - if !google_api_key.blank?
-  = javascript_include_tag "http://www.google.com/jsapi?key=#{google_api_key}"
+  = javascript_include_tag "//www.google.com/jsapi?key=#{google_api_key}"
   :javascript
     google.load("jquery", "1.4.2");
 - else
-  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 
 -# fall back to local jQuery if necessary
 :javascript
