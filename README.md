@@ -40,7 +40,7 @@ Rails Installation
     public/favicon.ico
 
     public/javascripts/dd_belatedpng.js
-    public/javascripts/jquery-1.4.2.min.js
+    public/javascripts/jquery-1.4.4.min.js
     public/javascripts/modernizr-1.6.min.js
     public/javascripts/plugins.js
     public/javascripts/rails.js
@@ -105,7 +105,7 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     src/partials/_page.scss
     
     js/dd_belatedpng.js
-    js/jquery-1.4.2.min.js
+    js/jquery-1.4.4.min.js
     js/modernizr-1.6.min.js
     js/plugins.js
     js/profiling/charts.swf

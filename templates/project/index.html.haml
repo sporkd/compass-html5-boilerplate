@@ -49,17 +49,16 @@
     -# 
       Javascript at the bottom for fast page loading
       Grab Google CDN's jQuery. fall back to local if necessary
-    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
+    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" }
     :javascript
-      !window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.2.min.js"%3E%3C/script%3E'))
+      !window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.4.min.js"%3E%3C/script%3E'))
     
     %script{ :src => "js/plugins.js?v=1" }
     %script{ :src => "js/script.js?v=1" }
     
     /[if lt IE 7 ]
-      %script{ :src => "js/dd_belatedpng.js" }
       :javascript
-        DD_belatedPNG.fix('img, .png_bg');
+        $.getScript("js/dd_belatedpng.js",function(){ DD_belatedPNG.fix('img, .png_bg'); });
         
     -# yui profiler and profileviewer - remove for production
     %script{ :src => "js/profiling/yahoo-profiling.min.js?v=1" }
