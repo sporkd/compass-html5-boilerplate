@@ -1,12 +1,12 @@
 !!! 5
 -# http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
--ie_html :lang => 'en', :class => 'no-js' do
+-ie_html :class => 'no-js' do
   = render :partial => 'layouts/head'
-  %body{ :class => "#{controller.controller_name}" }
+  %body{ :lang => 'en', :class => "#{controller.controller_name}" }
     #container
       %header#header
         = render :partial => 'layouts/header'
-      #main
+      #main{ :role => 'main' }
         = render :partial => 'layouts/flashes'
         = yield
       %footer#footer

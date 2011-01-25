@@ -67,7 +67,7 @@ sup { @include sup; }
   @include media-print;
 }
 
-@media all and (orientation:portrait) { 
+@media all and (orientation:portrait) {
   // Style adjustments for portrait mode goes here
 }
 

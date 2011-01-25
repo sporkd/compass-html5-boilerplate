@@ -41,12 +41,10 @@
   visibility: hidden;
 }
 
-// Hide only visually, but have it available for screenreaders
+// Hide only visually, but have it available for screenreaders: by Jon Neal
 // www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden
 @mixin visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);  // IE6, IE7
-  clip: rect(1px, 1px, 1px, 1px);
+  border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;
 }
 
 // Hide visually and from screenreaders, but maintain layout

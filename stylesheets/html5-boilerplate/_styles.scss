@@ -28,7 +28,7 @@ $list-left-margin: 1.8em !default;
 
   sup { @include sup; }
 
-  textarea { overflow: auto; }  // thnx ivannikolic! www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars
+  textarea { overflow: auto; }  // www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars
 
   @include accessible-focus;
 
@@ -49,27 +49,24 @@ $list-left-margin: 1.8em !default;
   @include no-nav-margins;
 }
 
+// set sub, sup without affecting line-height: gist.github.com/413930
 @mixin sub{ 
-  vertical-align: sub; font-size: smaller;
+  font-size: 75%; line-height: 0; position: relative; bottom: -0.25em;
 }
-
 @mixin sup{ 
-  vertical-align: super; font-size: smaller;
+  font-size: 75%; line-height: 0; position: relative; top: -0.5em;
 }
 
-// Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test
+// accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test
 @mixin accessible-focus {
   a:hover, a:active { outline: none; }
 }
 
-// www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/
+// www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap
 @mixin quoted-pre {
   pre {
+    white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word;
     padding: 15px;
-    white-space: pre;       // CSS2
-    white-space: pre-wrap;  // CSS 2.1
-    white-space: pre-line;  // CSS 3 (and 2.1 as well, actually)
-    word-wrap: break-word;  // IE
   }
 }
 
@@ -123,6 +120,6 @@ $list-left-margin: 1.8em !default;
 }
 
 @mixin no-nav-margins {
-  // Remove margins for navigation lists
-  nav ul, nav li { margin: 0; }
+  // remove margins for navigation lists
+  nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
 }

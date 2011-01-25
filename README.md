@@ -36,6 +36,7 @@ Rails Installation
     public/.htaccess
     public/crossdomain.xml
     public/robots.txt
+    public/humans.txt
     public/apple-touch-icon.png
     public/favicon.ico
 
@@ -52,8 +53,6 @@ Rails Installation
     config/compass.rb
     config/initializers/compass.rb
     config/google.yml
-    config/nginx.conf
-    config/mime.types
 
 The Scss files above will automatically get compiled to your Sass compilation directory:
 
@@ -65,7 +64,7 @@ manually add the following line to the top:
 
     require 'html5-boilerplate'
 
-### A few more minor points to store into your brainpan...
+### A few more minor points...
 
 If you still have an application.html.erb in your layouts, you will need to loose
 it now so that Rails will use your shiny new application.html.haml layout instead.
@@ -95,6 +94,7 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     404.html
     crossdomain.xml
     robots.txt
+    humans.txt
     apple-touch-icon.png
     favicon.ico
     
@@ -115,9 +115,6 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     
     .htaccess
     config.rb
-    nginx.conf
-    mime.types
-    web.config
 
 Run `compass watch my_project` and the SCSS files above will automatically
 get compiled to your Sass compilation directory whenever a change is made:
