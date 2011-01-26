@@ -58,24 +58,3 @@ sup { @include sup; }
 .clearfix {
   @include pie-clearfix;  // defined by compass core
 }
-
-
-//--------------------------------
-// Media
-//--------------------------------
-@media print {
-  @include media-print;
-}
-
-@media all and (orientation:portrait) {
-  // Style adjustments for portrait mode goes here
-}
-
-@media all and (orientation:landscape) {
-  // Style adjustments for landscape mode goes here
-}
-
-@media screen and (max-device-width: 480px) {
-  // Pass in false if you don't want iOS and WinMobile to mobile-optimize the text for you
-  @include media-mobile(true);
-}

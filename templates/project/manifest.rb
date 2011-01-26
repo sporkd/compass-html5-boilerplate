@@ -4,6 +4,8 @@ stylesheet 'style.scss', :media => 'all'
 stylesheet 'handheld.scss', :media => 'handheld'
 stylesheet 'partials/_base.scss'
 stylesheet 'partials/_example.scss'
+stylesheet 'partials/_fonts.scss'
+stylesheet 'partials/_media.scss'
 stylesheet 'partials/_page.scss'
 
 if Compass.configuration.project_type == :rails
