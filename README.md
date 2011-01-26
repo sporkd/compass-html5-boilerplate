@@ -31,6 +31,8 @@ Rails Installation
     app/stylesheets/partials/_base.scss
     app/stylesheets/partials/_example.scss
     app/stylesheets/partials/_page.scss
+    app/stylesheets/partials/_fonts.scss
+    app/stylesheets/partials/_media.scss
     
     public/404.html
     public/.htaccess
@@ -41,14 +43,10 @@ Rails Installation
     public/favicon.ico
 
     public/javascripts/dd_belatedpng.js
-    public/javascripts/jquery-1.4.4.min.js
-    public/javascripts/modernizr-1.6.min.js
+    public/javascripts/jquery.min.js
+    public/javascripts/modernizr.min.js
     public/javascripts/plugins.js
     public/javascripts/rails.js
-    public/javascripts/profiling/charts.swf
-    public/javascripts/profiling/config.js
-    public/javascripts/profiling/yahoo-profiling.css
-    public/javascripts/profiling/yahoo-profiling.min.js
     
     config/compass.rb
     config/initializers/compass.rb
@@ -103,15 +101,13 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     src/partials/_base.scss
     src/partials/_example.scss
     src/partials/_page.scss
+    src/partials/_fonts.scss
+    src/partials/_media.scss
     
     js/dd_belatedpng.js
-    js/jquery-1.4.4.min.js
-    js/modernizr-1.6.min.js
+    js/jquery.min.js
+    js/modernizr.min.js
     js/plugins.js
-    js/profiling/charts.swf
-    js/profiling/config.js
-    js/profiling/yahoo-profiling.css
-    js/profiling/yahoo-profiling.min.js
     
     .htaccess
     config.rb
