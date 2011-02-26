@@ -80,6 +80,9 @@ This extension has only been tested on Rails3.
 Stand Alone Installation
 ========================
 
+Use this if you're not using Rails, but still want compass and the html5-boilerplate sass libraries,
+It will create a simplified index.html (with haml source), but without the nice Rails helpers.
+
     gem install html5-boilerplate
     compass create my_project -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
 
@@ -89,6 +92,7 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
 **This will create a `my_project` directory containing the following files:**  
 
     index.html
+    index.html.haml
     404.html
     crossdomain.xml
     robots.txt

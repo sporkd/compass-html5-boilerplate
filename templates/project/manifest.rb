@@ -25,6 +25,7 @@ if Compass.configuration.project_type == :rails
   javascript 'javascripts/rails.js', :to => 'rails.js'
 else
   html 'index.html.haml'
+  file 'index.html.haml'
   javascript 'javascripts/dd_belatedpng.js', :to => 'dd_belatedpng.js'
   javascript 'javascripts/jquery-1.5.1.min.js', :to => 'jquery.min.js'
   javascript 'javascripts/modernizr-1.7.min.js', :to => 'modernizr.min.js'
