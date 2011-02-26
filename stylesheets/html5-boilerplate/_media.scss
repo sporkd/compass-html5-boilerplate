@@ -17,8 +17,8 @@
 }
 
 //
-// print styles
-// inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/
+// Print styles
+// Inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/
 
 @mixin media-print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
@@ -26,7 +26,7 @@
   a, a:visited { color: #444 !important; text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  // don't show links for images, or javascript/internal links
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  // Don't show links for images, or javascript/internal links
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
   thead { display: table-header-group; } // css-discuss.incutio.com/wiki/Printing_Tables
   tr, img { page-break-inside: avoid; }
@@ -37,8 +37,8 @@
 
 
 //
-// media queries for responsive design
-// these follow after primary styles so they will successfully override.
+// Media queries for responsive design
+// These follow after primary styles so they will successfully override.
 //
 
 @mixin media-orientation-portrait {
@@ -54,7 +54,7 @@
 @mixin media-mobile($optimize: true) {
   // j.mp/textsizeadjust
   @if not $optimize {
-    // don't allow iOS and WinMobile to mobile-optimize text
-    html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
+    // Don't allow iOS and WinMobile to mobile-optimize text
+    html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
   }
 }

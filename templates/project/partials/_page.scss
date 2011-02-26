@@ -5,11 +5,29 @@
 // probably be customized for each site
 //-----------------------------------------------
 
+body, select, input, textarea {
+  color: $font-color;
+  // Set your base font here, to apply evenly
+  // font-family: Georgia, serif;
+}
+
+body, select, input, textarea { color: $font-color; }
+
+html { @include force-scrollbar; }
+
+a, a:active, a:visited { color: $link-color; }
+a:hover { color: $link-hover-color; }
+
+//Headers (h1, h2, etc) have no default font-size or margin; define those yourself
 h1, h2, h3, h4, h5, h6 {
   // Bold might not be the best choice if you are
-  // embedding font faces that are already bold
+  // embedding a @font-face that's already bold
   font-weight: bold;
 }
+
+// See defaults in _base.scss
+a, a:active, a:visited { color: $link-color; }
+a:hover { color: $link-hover-color; }
 
 strong, th {
   font-weight: bold;

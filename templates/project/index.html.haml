@@ -26,7 +26,7 @@
     -# %link{ :href => "/favicon.ico", :rel => "shortcut icon" }/
     -# %link{ :href => "/apple-touch-icon.png", :rel => "apple-touch-icon" }/
     
-    -# CSS : implied media="all"
+    -# CSS: implied media="all"
     %link{ :href => "css/style.css?v=1", :media => "all", :rel => "stylesheet" }/
     
     -# Uncomment if you are specifically targeting less enabled mobile browsers
@@ -43,7 +43,7 @@
       
     -# 
       Javascript at the bottom for fast page loading
-      Grab Google CDN's jQuery. fall back to local if necessary
+      Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
     %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" }
     :javascript
       !window.jQuery && document.write(unescape('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))

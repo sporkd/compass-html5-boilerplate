@@ -1,16 +1,6 @@
-//
-//  style.css contains a reset, font normalization and some base styles.
-//  
-//  credit is left where credit is due.
-//  much inspiration was taken from these projects:
-//    yui.yahooapis.com/2.8.1/build/base/base.css
-//    camendesign.com/design/
-//    praegnanz.de/weblog/htmlcssjs-kickstart
-//
 //  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
 //  v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
 //  html5doctor.com/html-5-reset-stylesheet/
-//
 
 @mixin html5-boilerplate-reset {
   html, body, div, span, object, iframe,
@@ -40,17 +30,17 @@
   blockquote:before, blockquote:after,
   q:before, q:after { content:''; content:none; }
 
-  ins { background-color: #ff9; color: #000; text-decoration:none; }
+  ins { background-color: #ff9; color: #000; text-decoration: none; }
 
-  mark { background-color: #ff9; color: #000; font-style:italic; font-weight:bold; }
+  mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
 
   del { text-decoration: line-through; }
 
-  abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+  abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
 
-  table { border-collapse:collapse; border-spacing:0; }
+  table { border-collapse: collapse; border-spacing: 0; }
 
-  hr { display: block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+  hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-  input, select { vertical-align:middle; }
+  input, select { vertical-align: middle; }
 }

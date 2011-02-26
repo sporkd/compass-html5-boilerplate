@@ -45,6 +45,11 @@
 // www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden
 @mixin visually-hidden {
   border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;
+  // Extends the .visuallyhidden class to allow the element to be focusable
+  // when navigated to via the keyboard: drupal.org/node/897638
+  &.focusable:active, &.focusable:focus {
+    clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto;
+  }
 }
 
 // Hide visually and from screenreaders, but maintain layout

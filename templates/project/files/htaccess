@@ -91,13 +91,12 @@ AddEncoding gzip                       svgz
 AddType application/vnd.ms-fontobject  eot
 AddType font/truetype                  ttf
 AddType font/opentype                  otf
-AddType font/opentype                  woff
-        # ^ hack to avoid chrome console warning: crbug.com/70283
+AddType application/x-font-woff              woff
 
 # assorted types                                      
 AddType image/x-icon                   ico
 AddType image/webp                     webp
-AddType text/cache-manifest            manifest
+AddType text/cache-manifest            appcache manifest
 AddType text/x-component               htc
 AddType application/x-chrome-extension crx
 AddType application/x-xpinstall        xpi
@@ -110,8 +109,8 @@ AddType application/octet-stream       safariextz
 # ----------------------------------------------------------------------
 
 # e.g. Inside of script.combined.js you could have
-#   <!--#include file="jquery.js" -->
-#   <!--#include file="jquery.idletimer.js" -->
+#   <!--#include file="libs/jquery-1.5.0.min.js" -->
+#   <!--#include file="plugins/jquery.idletimer.js" -->
 # and they would be included into this single file
 
 # this is not in use in the boilerplate as it stands. you may
@@ -183,7 +182,7 @@ AddType application/octet-stream       safariextz
 # Perhaps better to whitelist expires rules? Perhaps.
   ExpiresDefault                          "access plus 1 month"
 
-# cache.manifest needs re-requests in FF 3.6 (thx Remy ~Introducing HTML5)
+# cache.appcache needs re-requests in FF 3.6 (thx Remy ~Introducing HTML5)
   ExpiresByType text/cache-manifest       "access plus 0 seconds"
 
 # your document html 
@@ -210,6 +209,9 @@ AddType application/octet-stream       safariextz
   ExpiresByType video/mp4                 "access plus 1 month"
   ExpiresByType video/webm                "access plus 1 month"
   
+# htc files  (css3pie)
+  ExpiresByType text/x-component          "access plus 1 month"
+  
 # webfonts
   ExpiresByType font/truetype             "access plus 1 month"
   ExpiresByType font/opentype             "access plus 1 month"
@@ -221,9 +223,11 @@ AddType application/octet-stream       safariextz
   ExpiresByType text/css                  "access plus 2 months"
   ExpiresByType application/javascript    "access plus 2 months"
   ExpiresByType text/javascript           "access plus 2 months"
+  
   <IfModule mod_headers.c>
     Header append Cache-Control "public"
   </IfModule>
+  
 </IfModule>
 
 
@@ -353,6 +357,7 @@ Options -MultiViews
 # custom 404 page
 # ----------------------------------------------------------------------
 
+# You can add custom pages to handle 500 or 403 pretty easily, if you like.
 ErrorDocument 404 /404.html
 
 
