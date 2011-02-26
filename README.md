@@ -14,7 +14,7 @@ Features
 
 * Html5 Boilerplate stylesheets implemented as a modularized Compass library
 * Lets you pick and choose only the Boilerplate mixins and includes you want
-* Generates sass/scss partials to keep your styleshees organized
+* Generates sass/scss partials to keep your stylesheets organized
 * Generates modularized haml layouts for Rails apps (header, footer, flashes, etc.)
 * Rails helpers to cleanly hide a little of Boilerplate's html complexity
 * Loads minified jQuery in production envs, but uncompressed version in development
