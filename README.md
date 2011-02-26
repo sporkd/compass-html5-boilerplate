@@ -2,21 +2,56 @@ Compass Html5 Boilerplate
 =========================
 
 HTML5 Boilerplate is a Compass extension based on HTML5 Boilerplate by Paul Irish.
-You can use it to kick-start fully compliant HTML5 applications. Generate either
-stand-alone HTML5 projects, or Rails applications with fully integrated HTML5
-Haml and Sass (Scss) templates.
+You can use it to kick-start fully compliant HTML5 applications. Setup your Rails
+applications with with fully integrated Haml and Sass/Scss templates that implement
+Boilerplate's functionality, or generate stand-alone Html5 Compass projects.
 
 Browse [html5boilerplate.com](http://html5boilerplate.com) for the full workup.
+
+Features
+=========
+(In addition to Html5 Boilerplate itself)
+
+* Html5 Boilerplate stylesheets implemented as a modularized Compass library
+* Lets you pick and choose only the Boilerplate mixins and includes you want
+* Generates sass/scss partials to keep your styleshees organized
+* Generates modularized haml layouts for Rails apps (header, footer, flashes, etc.)
+* Rails helpers to cleanly hide a little of Boilerplate's html complexity
+* Loads minified jQuery in production envs, but uncompressed version in development
+* Rails jquery-ujs driver installed and loaded along with jQuery and Modernizr
+* Setting API Key in google.yml will auto-load jquery from google (async)
+* Setting Analytics ID in google.yml will auto-load google analytics (async)
+* Uses content_for hooks to keep all your javascript and stylesheets in one place
+* Falls back to native Compass for stuff like clearfix and image replacement
+* Fully commented source, but the haml/sass output remains comment free
+* Not tested on animals
 
 Rails Installation
 ==================
 
-    gem install html5-boilerplate
-    cd my_rails_project
+First, make sure the following gems are in your Gemfile
+
+    gem "compass"
+    gem "haml"
+    gem "html5-boilerplate"
+
+Then run the following
+
+    bundle install
     compass init rails -r html5-boilerplate -u html5-boilerplate --force
 
-**This will install the following files in your rails project:**  
 (Using `--force` flag will overwrite any files that may already exist. In most cases this is probably what you want.)
+
+(For a new project, I answer "Yes" to keep my stylesheets in app/stylesheets, but "No" for compiling them into public/stylesheets/compiled.)
+
+Now remove your application.html.erb so that Haml can do it's thing
+
+    mv apps/views/layouts/application.html.erb apps/views/layouts/application.html.old
+
+Start your Rails server, and you're done!
+
+
+**Here's a list of the files that compass init installed in your Rails project:**
 
     app/views/layouts/application.html.haml
     app/views/layouts/_flashes.html.haml
@@ -62,17 +97,14 @@ manually add the following line to the top:
 
     require 'html5-boilerplate'
 
-### A few more minor points...
-
-If you still have an application.html.erb in your layouts, you will need to loose
-it now so that Rails will use your shiny new application.html.haml layout instead.
+### A few more points...
 
 The haml will compile to the equivalent of html5-boilerplate's index.html,
 but with all comments stripped out, and some additional rails stuff
-like csrf_meta_tags, flashes and the Rails jQuery driver.
+like csrf_meta_tags, flashes and the Rails jquery-ujs driver.
 
 You can set your own Google Analytics Account ID and your Google API Key
-either as ENV variables, or inside config/google.yml.
+either as ENV variables, or inside config/google.yml. (see that file)
 
 This extension has only been tested on Rails3.
 
@@ -128,5 +160,5 @@ License
 HTML5 Boilerplate by Paul Irish  
 (comments left intact in scss files)
 
-Compass Extension Copyright (c) 2010, Peter Gumeson  
+Compass Extension Copyright (c) 2010-2011, Peter Gumeson  
 [http://creativecommons.org/licenses/by/3.0](http://creativecommons.org/licenses/by/3.0)
