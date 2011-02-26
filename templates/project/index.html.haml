@@ -44,7 +44,7 @@
     -# 
       Javascript at the bottom for fast page loading
       Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
-    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" }
+    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" }
     :javascript
       !window.jQuery && document.write(unescape('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))
     
@@ -52,8 +52,9 @@
     %script{ :src => "js/script.js?v=1" }
     
     /[if lt IE 7 ]
+      %script{ :src => "js/dd_belatedpng.js" }
       :javascript
-        $.getScript("js/dd_belatedpng.js",function(){ DD_belatedPNG.fix('img, .png_bg'); });
+        //DD_belatedPNG.fix('img, .png_bg');
         
     -#  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
     -#  change the UA-XXXXX-X to be your site's ID

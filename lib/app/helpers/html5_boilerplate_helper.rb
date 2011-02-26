@@ -30,6 +30,22 @@ module Html5BoilerplateHelper
     ENV['GOOGLE_API_KEY'] || google_config(:google_api_key)
   end
 
+  def remote_jquery(version)
+    if Rails.env == 'development'
+      "'jquery', '#{version}', {uncompressed:true}"
+    else
+      "'jquery', '#{version}'"
+    end
+  end
+
+  def local_jquery(version)
+    if Rails.env == 'development'
+      "#{version}/jquery.js"
+    else
+      "#{version}/jquery.min.js"
+    end
+  end
+
 private
 
   def add_class(name, attrs)
