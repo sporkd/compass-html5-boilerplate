@@ -44,7 +44,7 @@ Then run the following
 
 (For a new project, I answer "Yes" to keep my stylesheets in app/stylesheets, but "No" for compiling them into public/stylesheets/compiled.)
 
-Now remove your application.html.erb so that Haml can do it's thing
+Now remove your application.html.erb so that Haml can do its thing
 
     mv apps/views/layouts/application.html.erb apps/views/layouts/application.html.old
 
