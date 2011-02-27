@@ -11,13 +11,6 @@ body, select, input, textarea {
   // font-family: Georgia, serif;
 }
 
-body, select, input, textarea { color: $font-color; }
-
-html { @include force-scrollbar; }
-
-a, a:active, a:visited { color: $link-color; }
-a:hover { color: $link-hover-color; }
-
 //Headers (h1, h2, etc) have no default font-size or margin; define those yourself
 h1, h2, h3, h4, h5, h6 {
   // Bold might not be the best choice if you are
@@ -25,7 +18,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-// See defaults in _base.scss
 a, a:active, a:visited { color: $link-color; }
 a:hover { color: $link-hover-color; }
 
