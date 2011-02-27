@@ -31,8 +31,12 @@ if Compass.configuration.project_type == :rails
   javascript "javascripts/plugins.js", :to => "plugins.js"
   javascript "javascripts/rails.js", :to => "rails.js"
 else
-  html "index.html.#{file_extn}"
-  file "index.html.#{file_extn}"
+  if file_extn=="erb"
+    html "index.html", :erb => true
+  else
+    html "index.html.haml"
+    file "index.html.haml"
+  end
   javascript "javascripts/dd_belatedpng.js", :to => "dd_belatedpng.js"
   javascript "javascripts/jquery-1.5.1.min.js", :to => "jquery.min.js"
   javascript "javascripts/modernizr-1.7.min.js", :to => "modernizr.min.js"
