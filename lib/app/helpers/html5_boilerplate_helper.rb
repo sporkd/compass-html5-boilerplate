@@ -14,22 +14,23 @@ module Html5BoilerplateHelper
     end
   end
 
-  def ie_tag_erb(name=:body, attrs={}, &block)
+  def ie_tag_erb(name=:body, attrs={})
     attrs.symbolize_keys!
-    concat("<!--[if lt IE 7 ]> #{ tag(name, add_class('ie6', attrs), true) } <![endif]-->".html_safe)
-    concat("<!--[if IE 7 ]>    #{ tag(name, add_class('ie7', attrs), true) } <![endif]-->".html_safe)
-    concat("<!--[if IE 8 ]>    #{ tag(name, add_class('ie8', attrs), true) } <![endif]-->".html_safe)
-    concat("<!--[if IE 9 ]>    #{ tag(name, add_class('ie9', attrs), true) } <![endif]-->".html_safe)
-    concat("<!--[if (gte IE 9)|!(IE)]><!-->".html_safe)
-    tag name, attrs do
-      concat("<!--<![endif]-->".html_safe)
-      block.call
-    end
+    html_head =<<-HTML
+    <!--[if lt IE 7 ]> #{ tag(name, add_class('ie6', attrs), true) } <![endif]-->
+    <!--[if IE 7 ]>    #{ tag(name, add_class('ie7', attrs), true) } <![endif]-->
+    <!--[if IE 8 ]>    #{ tag(name, add_class('ie8', attrs), true) } <![endif]-->
+    <!--[if IE 9 ]>    #{ tag(name, add_class('ie9', attrs), true) } <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    #{tag(name, attrs)}
+    <!--<![endif]-->
+    HTML
+    html_head.html_safe
   end
 
   def ie_html(attrs={}, &block)
     if using_erb?
-      ie_tag_erb(:html, attrs, &block)
+      ie_tag_erb(:html, attrs)
     else
       ie_tag(:html, attrs, &block)
     end
