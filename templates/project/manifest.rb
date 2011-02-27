@@ -1,9 +1,9 @@
-description "Compass extention for HTML5 Boilerplate located at http://html5boilerplate.com"
+description "Compass extension for HTML5 Boilerplate located at http://html5boilerplate.com"
 
 stylesheet 'style.scss', :media => 'all'
 stylesheet 'handheld.scss', :media => 'handheld'
 stylesheet 'partials/_base.scss'
-stylesheet 'partials/_example.scss'
+stylesheet 'partials/_overrides.scss'
 stylesheet 'partials/_fonts.scss'
 stylesheet 'partials/_media.scss'
 stylesheet 'partials/_page.scss'
@@ -41,7 +41,7 @@ html 'files/apple-touch-icon.png', :to => 'apple-touch-icon.png'
 html 'files/favicon.ico', :to => 'favicon.ico'
 
 help %Q{
-This is a Compass extention for HTML5 Boilerplate by Paul Irish
+This is a Compass extension for HTML5 Boilerplate by Paul Irish
 (See full docs at: http://github.com/sporkd/compass-html5-boilerplate)
 
 Rails Installation
