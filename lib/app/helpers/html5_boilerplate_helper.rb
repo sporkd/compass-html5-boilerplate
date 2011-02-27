@@ -14,7 +14,7 @@ module Html5BoilerplateHelper
     end
   end
 
-  def ie_tag_erb(name=:body, attrs={})
+  def ie_tag_erb(name=:body, attrs={}, &block)
     attrs.symbolize_keys!
     html_head =<<-HTML
     <!--[if lt IE 7 ]> #{ tag(name, add_class('ie6', attrs), true) } <![endif]-->
@@ -24,13 +24,15 @@ module Html5BoilerplateHelper
     <!--[if (gte IE 9)|!(IE)]><!-->
     #{tag(name, attrs)}
     <!--<![endif]-->
+      #{capture(&block)}
+    </html>
     HTML
     html_head.html_safe
   end
 
   def ie_html(attrs={}, &block)
     if using_erb?
-      ie_tag_erb(:html, attrs)
+      ie_tag_erb(:html, attrs, &block)
     else
       ie_tag(:html, attrs, &block)
     end
