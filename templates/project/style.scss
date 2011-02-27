@@ -1,24 +1,23 @@
-// First, set some default constants
+// Here's where we define some default constants
 @import "partials/base";
 
 // Then we'll import the compass extension
 @import "html5-boilerplate";
 
-// If you don't require any customization
-// you can choose to include the whole
-// enchilada by uncommeting this line
+// Now, you can simply include everything
+// (except media) by uncommeting this line
 //@include html5-boilerplate;
 
-// Or, you can pick and choose only the
-// sections you want to include
+// Or, you can pick and choose only the sections
+// you want by using the these includes
 @include html5-boilerplate-reset;
 @include html5-boilerplate-fonts;
 @include html5-boilerplate-styles;
 @include html5-boilerplate-helpers;
 
-// Or else, you can import this partial if you
-// want more control over which mixins to use
-//@import "partials/example";
+// Or, you can import the "overrides" partial if
+// you want more control over individual mixins
+//@import "partials/overrides";
 
 // Finally, put your own styles in these partials
 // and add more as needed (i.e. forms, tables, nav)

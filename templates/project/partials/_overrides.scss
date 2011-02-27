@@ -13,12 +13,7 @@
 //--------------------------------
 // Minimal Base Styles
 //--------------------------------
-body, select, input, textarea { color: $font-color; }
-
 html { @include force-scrollbar; }
-
-a, a:active, a:visited { color: $link-color; }
-a:hover { color: $link-hover-color; }
 
 ul, ol { margin-left: $list-left-margin; }
 ol { list-style-type: decimal; }
@@ -29,6 +24,8 @@ sub { @include sub; }
 
 sup { @include sup; }
 
+textarea { overflow: auto; }
+
 @include accessible-focus;
 
 @include quoted-pre;
@@ -36,6 +33,8 @@ sup { @include sup; }
 @include align-input-labels;
 
 @include hand-cursor-inputs;
+
+@include webkit-reset-form-elements;
 
 @include selected-text;
 

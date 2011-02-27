@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.version = "0.3.1"
+  s.version = "0.3.2"
   s.date = "2011-02-26"
 
   s.name = "html5-boilerplate"
