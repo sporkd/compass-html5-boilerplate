@@ -8,29 +8,40 @@ stylesheet 'partials/_fonts.scss'
 stylesheet 'partials/_media.scss'
 stylesheet 'partials/_page.scss'
 
-if Compass.configuration.project_type == :rails
-  file 'application.html.haml', :to => 'app/views/layouts/application.html.haml'
-  file '_flashes.html.haml', :to => 'app/views/layouts/_flashes.html.haml'
-  file '_footer.html.haml', :to => 'app/views/layouts/_footer.html.haml'
-  file '_head.html.haml', :to => 'app/views/layouts/_head.html.haml'
-  file '_header.html.haml', :to => 'app/views/layouts/_header.html.haml'
-  file '_javascripts.html.haml', :to => 'app/views/layouts/_javascripts.html.haml'
-  file '_stylesheets.html.haml', :to => 'app/views/layouts/_stylesheets.html.haml'
-  file 'files/google.yml', :to => 'config/google.yml'
-  javascript 'javascripts/dd_belatedpng.js', :to => 'dd_belatedpng.js'
-  javascript 'javascripts/jquery-1.5.1.js', :to => 'jquery.js'
-  javascript 'javascripts/jquery-1.5.1.min.js', :to => 'jquery.min.js'
-  javascript 'javascripts/modernizr-1.7.min.js', :to => 'modernizr.min.js'
-  javascript 'javascripts/plugins.js', :to => 'plugins.js'
-  javascript 'javascripts/rails.js', :to => 'rails.js'
+file_extn = ENV['TEMPLATE_ENGINE'] || "haml"
+file_extn = file_extn.downcase
+if ["erb","haml"].include?(file_extn)
+  file_extn
 else
-  html 'index.html.haml'
-  file 'index.html.haml'
-  javascript 'javascripts/dd_belatedpng.js', :to => 'dd_belatedpng.js'
-  javascript 'javascripts/jquery-1.5.1.min.js', :to => 'jquery.min.js'
-  javascript 'javascripts/modernizr-1.7.min.js', :to => 'modernizr.min.js'
-  javascript 'javascripts/plugins.js', :to => 'plugins.js'
-  javascript 'javascripts/script.js', :to => 'script.js'
+  file_extn = "haml"
+end
+if Compass.configuration.project_type == :rails
+  file "application.html.#{file_extn}", :to => "app/views/layouts/application.html.#{file_extn}"
+  file "_flashes.html.#{file_extn}", :to => "app/views/layouts/_flashes.html.#{file_extn}"
+  file "_footer.html.#{file_extn}", :to => "app/views/layouts/_footer.html.#{file_extn}"
+  file "_head.html.#{file_extn}", :to => "app/views/layouts/_head.html.#{file_extn}"
+  file "_header.html.#{file_extn}", :to => "app/views/layouts/_header.html.#{file_extn}"
+  file "_javascripts.html.#{file_extn}", :to => "app/views/layouts/_javascripts.html.#{file_extn}"
+  file "_stylesheets.html.#{file_extn}", :to => "app/views/layouts/_stylesheets.html.#{file_extn}"
+  file "files/google.yml", :to => "config/google.yml"
+  javascript "javascripts/dd_belatedpng.js", :to => "dd_belatedpng.js"
+  javascript "javascripts/jquery-1.5.1.js", :to => "jquery.js"
+  javascript "javascripts/jquery-1.5.1.min.js", :to => "jquery.min.js"
+  javascript "javascripts/modernizr-1.7.min.js", :to => "modernizr.min.js"
+  javascript "javascripts/plugins.js", :to => "plugins.js"
+  javascript "javascripts/rails.js", :to => "rails.js"
+else
+  if file_extn=="erb"
+    html "index.html", :erb => true
+  else
+    html "index.html.haml"
+    file "index.html.haml"
+  end
+  javascript "javascripts/dd_belatedpng.js", :to => "dd_belatedpng.js"
+  javascript "javascripts/jquery-1.5.1.min.js", :to => "jquery.min.js"
+  javascript "javascripts/modernizr-1.7.min.js", :to => "modernizr.min.js"
+  javascript "javascripts/plugins.js", :to => "plugins.js"
+  javascript "javascripts/script.js", :to => "script.js"
 end
 html 'files/404.html', :to => '404.html'
 html 'files/htaccess', :to => '.htaccess'

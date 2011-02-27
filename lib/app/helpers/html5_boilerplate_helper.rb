@@ -14,12 +14,36 @@ module Html5BoilerplateHelper
     end
   end
 
+  def ie_tag_erb(name=:body, attrs={}, &block)
+    attrs.symbolize_keys!
+    html_head =<<-HTML
+    <!--[if lt IE 7 ]> #{ tag(name, add_class('ie6', attrs), true) } <![endif]-->
+    <!--[if IE 7 ]>    #{ tag(name, add_class('ie7', attrs), true) } <![endif]-->
+    <!--[if IE 8 ]>    #{ tag(name, add_class('ie8', attrs), true) } <![endif]-->
+    <!--[if IE 9 ]>    #{ tag(name, add_class('ie9', attrs), true) } <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    #{tag(name, attrs)}
+    <!--<![endif]-->
+      #{capture(&block)}
+    </html>
+    HTML
+    html_head.html_safe
+  end
+
   def ie_html(attrs={}, &block)
-    ie_tag(:html, attrs, &block)
+    if using_erb?
+      ie_tag_erb(:html, attrs, &block)
+    else
+      ie_tag(:html, attrs, &block)
+    end
   end
 
   def ie_body(attrs={}, &block)
-    ie_tag(:body, attrs, &block)
+    if using_erb?
+      ie_tag_erb(:body, attrs, &block)
+    else
+      ie_tag(:body, attrs, &block)
+    end
   end
 
   def google_account_id
@@ -47,6 +71,11 @@ module Html5BoilerplateHelper
   end
 
 private
+
+  def using_erb?
+    template = ENV['TEMPLATE_ENGINE'] || "haml"
+    template.downcase == "erb"
+  end
 
   def add_class(name, attrs)
     classes = attrs[:class] || ''

@@ -14,6 +14,7 @@ Features
 
 * Html5 Boilerplate stylesheets implemented as a modularized Compass library
 * Lets you pick and choose only the Boilerplate mixins and includes you want
+* Choose either erb or haml templates
 * Generates sass/scss partials to keep your stylesheets organized
 * Generates modularized haml layouts for Rails apps (header, footer, flashes, etc.)
 * Rails helpers to cleanly hide a little of Boilerplate's html complexity
@@ -34,6 +35,12 @@ First, make sure the following gems are in your Gemfile
     gem "compass"
     gem "haml"
     gem "html5-boilerplate"
+    
+If you want to use erb as the template engine set an environment variable called 'TEMPLATE_ENGINE'
+
+.e.g. declare -x TEMPLATE_ENGINE="erb"
+
+Not specifying an engine or anything other than "erb" it will fallback to using Haml
 
 Then run the following
 
@@ -44,7 +51,7 @@ Then run the following
 
 (For a new project, I answer "Yes" to keep my stylesheets in app/stylesheets, but "No" for compiling them into public/stylesheets/compiled.)
 
-Now remove your application.html.erb so that Haml can do its thing
+If you're using Haml you'll probably want to remove your application.html.erb so that Haml can do its thing
 
     mv apps/views/layouts/application.html.erb apps/views/layouts/application.html.old
 
