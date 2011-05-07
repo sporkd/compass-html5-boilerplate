@@ -46,7 +46,7 @@ Then run the following
 
 Now remove your application.html.erb so that Haml can do its thing
 
-    mv apps/views/layouts/application.html.erb apps/views/layouts/application.html.old
+    mv app/views/layouts/application.html.erb app/views/layouts/application.html.old
 
 Start your Rails server, and you're done!
 
