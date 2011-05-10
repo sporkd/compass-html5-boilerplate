@@ -55,5 +55,5 @@ textarea { overflow: auto; }
 .visuallyhidden { @include visually-hidden; }
 
 .clearfix {
-  @include pie-clearfix;  // defined by compass core
+  @include micro-clearfix;
 }

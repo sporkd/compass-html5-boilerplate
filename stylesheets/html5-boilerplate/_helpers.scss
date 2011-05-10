@@ -13,7 +13,7 @@
 
   .visuallyhidden { @include visually-hidden; }
 
-  .clearfix { @include pie-clearfix; }
+  .clearfix { @include micro-clearfix; }
 }
 
 // Almost the same as compass replace-text
@@ -54,6 +54,15 @@
 
 // Hide visually and from screenreaders, but maintain layout
 @mixin invisible { visibility: hidden; }
+
+// The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations.
+// nicolasgallagher.com/micro-clearfix-hack/
+@mixin micro-clearfix {
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+  zoom: 1;
+}
+
 
 // The Magnificent CLEARFIX << j.mp/phayesclearfix
 @mixin magnificent-clearfix {
