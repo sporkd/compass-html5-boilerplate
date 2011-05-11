@@ -30,8 +30,6 @@ textarea { overflow: auto; }
 
 @include quoted-pre;
 
-@include align-input-labels;
-
 @include hand-cursor-inputs;
 
 @include reset-form-elements;

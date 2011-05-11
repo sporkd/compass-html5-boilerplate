@@ -1,19 +1,5 @@
 @mixin html5-boilerplate-media {
-  @media print {
-    @include media-print;
-  }
-
-  @media all and (orientation:portrait) { 
-    @include media-orientation-portrait;
-  }
-
-  @media all and (orientation:landscape) {
-    @include media-orientation-landscape;
-  }
-
-  @media screen and (max-device-width: 480px) {
-    @include media-mobile;
-  }
+  @warn "The 'html5-boilerplate-media' mixin has been deprecated.";
 }
 
 //
@@ -30,31 +16,20 @@
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
   thead { display: table-header-group; } // css-discuss.incutio.com/wiki/Printing_Tables
   tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
 }
 
-
-//
-// Media queries for responsive design
-// These follow after primary styles so they will successfully override.
-//
-
 @mixin media-orientation-portrait {
-  // Style adjustments for portrait mode goes here
+  @warn "The 'media-orientation-portrait' mixin has been deprecated.";
 }
 
 @mixin media-orientation-landscape {
-  // Style adjustments for landscape mode goes here
+  @warn "The 'media-orientation-landscape' mixin has been deprecated.";
 }
 
-// Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
-// consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold
 @mixin media-mobile($optimize: true) {
-  // j.mp/textsizeadjust
-  @if not $optimize {
-    // Don't allow iOS and WinMobile to mobile-optimize text
-    html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
-  }
+  @warn "The 'media-mobile' mixin has been deprecated.";
 }

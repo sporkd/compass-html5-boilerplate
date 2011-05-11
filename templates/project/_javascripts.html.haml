@@ -13,12 +13,6 @@
   window.jQuery || document.write("<script src='/javascripts/jquery.min.js'>\x3C/script>")
   
 = javascript_include_tag 'rails', 'plugins', 'application'
-
--# Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb
-/[if lt IE 7 ]
-  = javascript_include_tag 'dd_belatedpng.js'
-  :javascript
-    //DD_belatedPNG.fix('img, .png_bg');
     
 -#  Append your own using content_for :javascripts
 = yield :javascripts
@@ -27,7 +21,7 @@
 -# Looks for google_account_id first in ENV['GOOGLE_ACCOUNT_ID'] then in config/google.yml
 - if !google_account_id.blank?
   :javascript
-    var _gaq=[["_setAccount","#{google_account_id}"],["_trackPageview"]];
+    var _gaq=[["_setAccount","#{google_account_id}"],["_trackPageview"],["_trackPageLoadTime"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
     s.parentNode.insertBefore(g,s)}(document,"script"));

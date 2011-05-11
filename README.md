@@ -62,7 +62,6 @@ Start your Rails server, and you're done!
     app/views/layouts/_stylesheets.html.haml
     
     app/stylesheets/style.scss
-    app/stylesheets/handheld.scss
     app/stylesheets/partials/_base.scss
     app/stylesheets/partials/_overrides.scss
     app/stylesheets/partials/_page.scss
@@ -76,8 +75,7 @@ Start your Rails server, and you're done!
     public/humans.txt
     public/apple-touch-icon.png
     public/favicon.ico
-
-    public/javascripts/dd_belatedpng.js
+    
     public/javascripts/jquery.min.js
     public/javascripts/modernizr.min.js
     public/javascripts/plugins.js
@@ -90,7 +88,6 @@ Start your Rails server, and you're done!
 The Scss files above will automatically get compiled to your Sass compilation directory:
 
     public/stylesheets/style.css
-    public/stylesheets/handheld.css
 
 **Note:** If you already have a config/compass.rb file in your project, you may need to
 manually add the following line to the top:
@@ -133,14 +130,12 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     favicon.ico
     
     src/style.scss
-    src/handheld.scss
     src/partials/_base.scss
     src/partials/_overrides.scss
     src/partials/_page.scss
     src/partials/_fonts.scss
     src/partials/_media.scss
     
-    js/dd_belatedpng.js
     js/jquery.min.js
     js/modernizr.min.js
     js/plugins.js
@@ -152,7 +147,6 @@ Run `compass watch my_project` and the SCSS files above will automatically
 get compiled to your Sass compilation directory whenever a change is made:
 
     css/style.css
-    css/handheld.css
 
 License
 =======

@@ -1,21 +1,22 @@
 //
-// These are in their own partial because you probably
-// want to customize on a per-site basis
+// Placeholder media queries for responsive design. Modify as design requires.
+// These follow after, and will override, the primary ('mobile first') styles
+// The closing /mediaquery comment is required by respond.js min/max-width Media Query polyfill
 //
 
+@media only screen and (min-width: 480px) {
+  // Style adjustments for viewports 480px and over go here
+  
+}/*/mediaquery*/
+
+@media only screen and (min-width: 768px) {
+  // Style adjustments for viewports 768px and over go here
+  
+}/*/mediaquery*/
+
+
+// Print styles
+// Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
 @media print {
   @include media-print;
-}
-
-@media all and (orientation:portrait) {
-  // Style adjustments for portrait mode goes here
-}
-
-@media all and (orientation:landscape) {
-  // Style adjustments for landscape mode goes here
-}
-
-@media screen and (max-device-width: 480px) {
-  // Pass in false if you don't want iOS and WinMobile to mobile-optimize the text for you
-  @include media-mobile(true);
 }

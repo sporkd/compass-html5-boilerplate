@@ -28,9 +28,6 @@
     -# CSS: implied media="all"
     %link{ :href => "css/style.css?v=1", :media => "all", :rel => "stylesheet" }/
     
-    -# Uncomment if you are specifically targeting less enabled mobile browsers
-    -# %link{ :href => "css/handheld.css?v=1", :media => "handheld", :rel => "stylesheet" }/
-    
     -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
     %script{ :src => "js/modernizr.min.js" }
     
@@ -50,11 +47,6 @@
     %script{ :src => "js/plugins.js?v=1" }
     %script{ :src => "js/script.js?v=1" }
     
-    /[if lt IE 7 ]
-      %script{ :src => "js/dd_belatedpng.js" }
-      :javascript
-        //DD_belatedPNG.fix('img, .png_bg');
-        
     -#  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
     -#  change the UA-XXXXX-X to be your site's ID
     :javascript
