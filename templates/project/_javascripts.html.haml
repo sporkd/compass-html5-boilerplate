@@ -4,9 +4,9 @@
 - if !google_api_key.blank?
   = javascript_include_tag "//www.google.com/jsapi?key=#{google_api_key}"
   :javascript
-    google.load(#{ remote_jquery("1.5.2") });
+    google.load(#{ remote_jquery("1.6") });
 - else
-  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/#{ local_jquery("1.5.2") }"
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/#{ local_jquery("1.6") }"
 
 -# fall back to local jQuery if necessary
 :javascript
