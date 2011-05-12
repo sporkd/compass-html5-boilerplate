@@ -19,6 +19,7 @@ if Compass.configuration.project_type == :rails
   javascript 'javascripts/jquery-1.6.js', :to => 'jquery.js'
   javascript 'javascripts/jquery-1.6.min.js', :to => 'jquery.min.js'
   javascript 'javascripts/modernizr-1.7.min.js', :to => 'modernizr.min.js'
+  javascript 'javascripts/respond.min.js', :to => 'respond.min.js'
   javascript 'javascripts/plugins.js', :to => 'plugins.js'
   javascript 'javascripts/rails.js', :to => 'rails.js'
 else
@@ -26,6 +27,7 @@ else
   file 'index.html.haml'
   javascript 'javascripts/jquery-1.6.min.js', :to => 'jquery.min.js'
   javascript 'javascripts/modernizr-1.7.min.js', :to => 'modernizr.min.js'
+  javascript 'javascripts/respond.min.js', :to => 'respond.min.js'
   javascript 'javascripts/plugins.js', :to => 'plugins.js'
   javascript 'javascripts/script.js', :to => 'script.js'
 end

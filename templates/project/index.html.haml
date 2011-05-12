@@ -28,8 +28,10 @@
     -# CSS: implied media="all"
     %link{ :href => "css/style.css?v=1", :media => "all", :rel => "stylesheet" }/
     
-    -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
+    -# All JavaScript at the bottom, except for Modernizr and Respond.
+    -# Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
     %script{ :src => "js/modernizr.min.js" }
+    %script{ :src => "js/respond.min.js" }
     
   %body
     #container
