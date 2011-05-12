@@ -9,9 +9,8 @@
   %head
     %meta{ :charset => "utf-8" }/
     
-    -# 
-      Always force latest IE rendering engine (even in intranet) & Chrome Frame
-      Remove this if you use the .htaccess
+    -# Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    -# Remove this if you use the .htaccess
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
     
     %title
@@ -19,11 +18,9 @@
     %meta{ :name => "author", :content => "" }/
     
     -# Mobile viewport optimized: j.mp/bplateviewport
-    %meta{ :content => "width=device-width, initial-scale=1.0", :name => "viewport" }/
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
     
-    -# Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references
-    -# %link{ :href => "/favicon.ico", :rel => "shortcut icon" }/
-    -# %link{ :href => "/apple-touch-icon.png", :rel => "apple-touch-icon" }/
+    -# Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons
     
     -# CSS: implied media="all"
     %link{ :href => "css/style.css?v=1", :media => "all", :rel => "stylesheet" }/
@@ -36,7 +33,7 @@
   %body
     #container
       %header
-      #main
+      #main{ :role => 'main' }
       %footer
       
     -# 
@@ -52,8 +49,7 @@
     -#  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
     -#  change the UA-XXXXX-X to be your site's ID
     :javascript
-      var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+      var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
       g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
       s.parentNode.insertBefore(g,s)}(document,"script"));
-
