@@ -345,11 +345,11 @@ FileETag None
 # Option 1:
 # Rewrite "domain.com/foo -> domain.com/foo/"
 
-<IfModule mod_rewrite.c>
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/|#(.*))$
-  RewriteRule ^(.*)$ /$1/ [R=301,L]
-</IfModule>
+#<IfModule mod_rewrite.c>
+#  RewriteCond %{REQUEST_FILENAME} !-f
+#  RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/|#(.*))$
+#  RewriteRule ^(.*)$ /$1/ [R=301,L]
+#</IfModule>
 
 # ----------------------------------------------------------------------
 
