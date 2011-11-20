@@ -44,9 +44,9 @@
     -# Javascript at the bottom for fast page loading
     
     -# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
-    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js" }
-    :javascript
-      window.jQuery || document.write("<script src='js/jquery.min.js'>\x3C/script>")
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" }
+    %script
+      window.jQuery || document.write("<script src='js/jquery-1.6.2.min.js'>\x3C/script>")
     
     -# scripts concatenated and minified via ant build script
     %script{ :src => "js/plugins.js" }
@@ -55,7 +55,7 @@
     
     -#  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
     -#  change the UA-XXXXX-X to be your site's ID
-    :javascript
+    %script
       var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
       g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
@@ -66,6 +66,7 @@
       chromium.org/developers/how-tos/chrome-frame-getting-started
     
     <!--[if lt IE 7]>
-      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-      <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js" }
+    %script
+      window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})});
     <![endif]-->

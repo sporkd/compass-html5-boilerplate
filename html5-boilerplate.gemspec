@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.date = "2011-11-19"
 
   s.name = "html5-boilerplate"
-  s.authors = ["Peter Gumeson"]
+  s.authors = ["Peter Gumeson", "Grady Kuhnline"]
   s.summary = %q{A Compass extension based on Paul Irish's HTML5 Boilerplate}
   s.description = %q{A Compass extension based on Paul Irish's HTML5 Boilerplate at http://html5boilerplate.com}
   s.email = "gumeson@gmail.com"

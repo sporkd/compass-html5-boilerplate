@@ -74,6 +74,10 @@ Start your Rails server, and you're done!
     public/robots.txt
     public/humans.txt
     public/apple-touch-icon.png
+    public/apple-touch-icon-57x57-precomposed.png
+    public/apple-touch-icon-72x72-precomposed.png
+    public/apple-touch-icon-114x114-precomposed.png
+    public/apple-touch-icon-precomposed.png
     public/favicon.ico
     
     public/javascripts/jquery.min.js
@@ -127,6 +131,10 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     robots.txt
     humans.txt
     apple-touch-icon.png
+    apple-touch-icon-57x57-precomposed.png
+    apple-touch-icon-72x72-precomposed.png
+    apple-touch-icon-114x114-precomposed.png
+    apple-touch-icon-precomposed.png
     favicon.ico
     
     src/style.scss
