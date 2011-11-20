@@ -1,22 +1,27 @@
-//
-// Placeholder media queries for responsive design. Modify as design requires.
-// These follow after, and will override, the primary ('mobile first') styles
-// The closing /mediaquery comment is required by respond.js min/max-width Media Query polyfill
-//
+// ==|== media queries ======================================================
+// PLACEHOLDER Media Queries for Responsive Design.
+// These override the primary ('mobile first') styles
+// Modify as content requires.
+// ========================================================================== */
 
 @media only screen and (min-width: 480px) {
-  // Style adjustments for viewports 480px and over go here
-  
-}/*/mediaquery*/
+  /* Style adjustments for viewports 480px and over go here */
+
+}
 
 @media only screen and (min-width: 768px) {
-  // Style adjustments for viewports 768px and over go here
-  
-}/*/mediaquery*/
+  /* Style adjustments for viewports 768px and over go here */
+
+}
 
 
-// Print styles
-// Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+
+// ==|== print styles =======================================================
+// Print styles.
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ========================================================================== */
+@include html5-boilerplate-print;
 @media print {
-  @include media-print;
+  /* Style adjustments for print go here */
+  
 }

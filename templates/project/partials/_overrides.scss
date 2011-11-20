@@ -1,57 +1,53 @@
-//--------------------------------
-// CSS Reset
-//--------------------------------
-@include html5-boilerplate-reset;
+// ==|== normalize =======================================================
 
+// =============================================================================
+// HTML5 display definitions
+// =============================================================================
+@include h5bp-normalize-html5;
 
-//--------------------------------
-// Base Fonts
-//--------------------------------
-@include html5-boilerplate-fonts($base-font-family, $base-font-size, $base-line-height);
+// =============================================================================
+// Base
+// =============================================================================
+@include h5bp-normalize-base( $base-font-family, $base-font-size, $base-line-height, $font-color );
+@include h5bp-normalize-selection( $selected-background-color, $selected-font-color );
 
+// =============================================================================
+// Links
+// =============================================================================
+@include h5bp-normalize-links( $link-color, $link-visited-color, $link-hover-color );
 
-//--------------------------------
-// Minimal Base Styles
-//--------------------------------
-html { @include force-scrollbar; }
+// =============================================================================
+// Typography
+// =============================================================================
+@include h5bp-normalize-typography( abbr bold blockquote dfn hr ins mark monospace pre quotes small subsup );
 
-ul, ol { margin-left: $list-left-margin; }
-ol { list-style-type: decimal; }
+// =============================================================================
+// Lists
+// =============================================================================
+@include h5bp-normalize-lists;
 
-td, td img { vertical-align: top; }
+// =============================================================================
+// Embedded content
+// =============================================================================
+@include h5bp-normalize-images;
+@include h5bp-normalize-svg;
 
-sub { @include sub; }
+// =============================================================================
+// Figures
+// =============================================================================
+@include h5bp-normalize-figures;
 
-sup { @include sup; }
+// =============================================================================
+// Forms
+// =============================================================================
+@include h5bp-normalize-forms;
 
-textarea { overflow: auto; }
+// =============================================================================
+// Tables
+// =============================================================================
+@include h5bp-normalize-tables;
 
-@include accessible-focus;
-
-@include quoted-pre;
-
-@include hand-cursor-inputs;
-
-@include reset-form-elements;
-
-@include selected-text;
-
-@include webkit-tap-highlight;
-
-@include ie-hacks;
-
-@include no-nav-margins;
-
-
-//--------------------------------
-// Helpers
-//--------------------------------
-.ir { @include image-replacement; }
-
-.hidden { @include hidden; }
-
-.visuallyhidden { @include visually-hidden; }
-
-.clearfix {
-  @include micro-clearfix;
-}
+// ==|== non-semantic helper classes ========================================
+// Please define your styles before this section.
+// ==========================================================================
+@include html5-boilerplate-helpers;
