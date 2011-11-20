@@ -19,7 +19,7 @@
 // =============================================================================
 // Typography
 // =============================================================================
-@include h5bp-normalize-typography( list(
+@include h5bp-normalize-typography((
   abbr,
   bold,
   blockquote,
@@ -32,7 +32,7 @@
   quotes,
   small,
   subsup
-) );
+));
 
 // =============================================================================
 // Lists
@@ -59,8 +59,3 @@
 // Tables
 // =============================================================================
 @include h5bp-normalize-tables;
-
-// ==|== non-semantic helper classes ========================================
-// Please define your styles before this section.
-// ==========================================================================
-@include html5-boilerplate-helpers;

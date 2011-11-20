@@ -1,26 +1,17 @@
 // ==|== normalize =======================================================
-@mixin html5-boilerplate-normalize {
-  @include h5bp-normalize-html5;
-  @include h5bp-normalize-base;
-  @include h5bp-normalize-selection;
-  @include h5bp-normalize-links;
-  @include h5bp-normalize-typography;
-  @include h5bp-normalize-lists;
-  @include h5bp-normalize-images;
-  @include h5bp-normalize-svg;
-  @include h5bp-normalize-figures;
-  @include h5bp-normalize-forms;
-  @include h5bp-normalize-tables;
+@mixin html5-boilerplate-normalize($list: false) {
+  @if not($list) or in-list($list, html5) {      @include h5bp-normalize-html5; }
+  @if not($list) or in-list($list, base) {       @include h5bp-normalize-base; }
+  @if not($list) or in-list($list, selection) {  @include h5bp-normalize-selection; }
+  @if not($list) or in-list($list, links) {      @include h5bp-normalize-links; }
+  @if not($list) or in-list($list, typography) { @include h5bp-normalize-typography; }
+  @if not($list) or in-list($list, lists) {      @include h5bp-normalize-lists; }
+  @if not($list) or in-list($list, images) {     @include h5bp-normalize-images; }
+  @if not($list) or in-list($list, svg) {        @include h5bp-normalize-svg; }
+  @if not($list) or in-list($list, figures) {    @include h5bp-normalize-figures; }
+  @if not($list) or in-list($list, forms) {      @include h5bp-normalize-forms; }
+  @if not($list) or in-list($list, tables) {     @include h5bp-normalize-tables; }
 }
-
-@function in-list($list, $value) {
-  @each $item in $list {
-    @if $item == $value {
-      @return true;
-    }
-  }
-  @return false;
-};
 
 // =============================================================================
 // HTML5 display definitions

@@ -20,8 +20,9 @@
 // Print styles.
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ========================================================================== */
-@include html5-boilerplate-print;
+
 @media print {
-  /* Style adjustments for print go here */
+  @include html5-boilerplate-print(false);
   
+  /* Style adjustments for print go here */
 }

@@ -2,12 +2,12 @@
 // Please define your styles before this section.
 // ==========================================================================
 
-@mixin html5-boilerplate-helpers {
-  .ir { @include image-replacement; }
-  .hidden { @include hidden; }
-  .visuallyhidden { @include visuallyhidden; }
-  .invisible { @include invisible; }
-  .clearfix { @include h5bp-clearfix; }
+@mixin html5-boilerplate-helpers($list: false) {
+  @if not($list) or in-list($list, ir) { .ir { @include image-replacement; } }
+  @if not($list) or in-list($list, hidden) { .hidden { @include hidden; } }
+  @if not($list) or in-list($list, visuallyhidden) { .visuallyhidden { @include visuallyhidden; } }
+  @if not($list) or in-list($list, invisible) { .invisible { @include invisible; } }
+  @if not($list) or in-list($list, clearfix) { .clearfix { @include h5bp-clearfix; } }
 }
 
 //For image replacement
