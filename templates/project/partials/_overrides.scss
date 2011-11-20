@@ -19,7 +19,20 @@
 // =============================================================================
 // Typography
 // =============================================================================
-@include h5bp-normalize-typography( abbr bold blockquote dfn hr ins mark monospace pre quotes small subsup );
+@include h5bp-normalize-typography( list(
+  abbr,
+  bold,
+  blockquote,
+  dfn,
+  hr,
+  ins,
+  mark,
+  monospace,
+  pre,
+  quotes,
+  small,
+  subsup
+) );
 
 // =============================================================================
 // Lists

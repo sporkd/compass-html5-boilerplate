@@ -71,7 +71,7 @@ $font-color: #222 !default;
   }
 
   body, button, input, select, textarea {
-    font-family: $base-font-family
+    font-family: $base-font-family;
     color: $font-color;
   }
 }  
@@ -128,30 +128,30 @@ $link-hover-color: #06e !default;
 // Typography
 // =============================================================================
 @mixin h5bp-normalize-typography($list: false) {
-  @if !$list || in-list($list, abbr) {
+  @if not($list) or in-list($list, abbr) {
     abbr[title] {
       border-bottom: 1px dotted;
     }
   }
 
-  @if !$list || in-list($list, bold) {
+  @if not($list) or in-list($list, bold) {
     b, strong {
       font-weight: bold;
     }
   }
 
-  @if !$list || in-list($list, blockquote) {
+  @if not($list) or in-list($list, blockquote) {
     blockquote {
       margin: 1em 40px;
     }
   }
   
-  @if !$list || in-list($list, dfn) {
+  @if not($list) or in-list($list, dfn) {
     dfn {
       font-style: italic;
     }
   }
-  @if !$list || in-list($list, hr) {
+  @if not($list) or in-list($list, hr) {
     hr {
       display: block;
       height: 1px;
@@ -162,7 +162,7 @@ $link-hover-color: #06e !default;
     }
   }
 
-  @if !$list || in-list($list, ins) {
+  @if not($list) or in-list($list, ins) {
     ins {
       background: #ff9;
       color: #000;
@@ -170,7 +170,7 @@ $link-hover-color: #06e !default;
     }
   }
 
-  @if !$list || in-list($list, mark) {
+  @if not($list) or in-list($list, mark) {
     mark {
       background: #ff0;
       color: #000;
@@ -180,7 +180,7 @@ $link-hover-color: #06e !default;
   }
 
   // Redeclare monospace font family: h5bp.com/j 
-  @if !$list || in-list($list, monospace) {
+  @if not($list) or in-list($list, monospace) {
     pre, code, kbd, samp {
       font-family: monospace, monospace;
       _font-family: 'courier new', monospace;
@@ -189,7 +189,7 @@ $link-hover-color: #06e !default;
   }
 
   // Improve readability of pre-formatted text in all browsers 
-  @if !$list || in-list($list, pre) {
+  @if not($list) or in-list($list, pre) {
     pre {
       white-space: pre;
       white-space: pre-wrap;
@@ -197,7 +197,7 @@ $link-hover-color: #06e !default;
     }
   }
 
-  @if !$list || in-list($list, quotes) {
+  @if not($list) or in-list($list, quotes) {
     q {
       quotes: none;
     }
@@ -208,14 +208,14 @@ $link-hover-color: #06e !default;
     }
   }
 
-  @if !$list || in-list($list, small) {
+  @if not($list) or in-list($list, small) {
     small {
       font-size: 85%;
     }
   }
   
   // Position subscript and superscript content without affecting line-height: h5bp.com/k
-  @if !$list || in-list($list, subsup) {
+  @if not($list) or in-list($list, subsup) {
     sub, sup {
       font-size: 75%;
       line-height: 0;

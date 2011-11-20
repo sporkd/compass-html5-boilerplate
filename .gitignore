@@ -3,3 +3,8 @@
 tmp/*
 pkg/*
 html5-boilerplate-*.gem
+
+/.project
+/config.rb
+/test/style.css
+/.sass-cache
