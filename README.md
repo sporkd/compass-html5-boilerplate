@@ -74,6 +74,10 @@ Start your Rails server, and you're done!
     public/robots.txt
     public/humans.txt
     public/apple-touch-icon.png
+    public/apple-touch-icon-57x57-precomposed.png
+    public/apple-touch-icon-72x72-precomposed.png
+    public/apple-touch-icon-114x114-precomposed.png
+    public/apple-touch-icon-precomposed.png
     public/favicon.ico
     
     public/javascripts/jquery.min.js
@@ -113,7 +117,7 @@ Use this if you're not using Rails, but still want compass and the html5-boilerp
 It will create a simplified index.html (with haml source), but without the nice Rails helpers.
 
     gem install html5-boilerplate
-    compass create my_project -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
+    compass create my_project -r compass-h5bp -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
 
 The `--javascripts-dir` and `--css-dir` flags are to keep consistent with the original project layout.
 If you omit them, be sure to edit your javascript and style tags accordingly in index.html.
@@ -127,6 +131,10 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     robots.txt
     humans.txt
     apple-touch-icon.png
+    apple-touch-icon-57x57-precomposed.png
+    apple-touch-icon-72x72-precomposed.png
+    apple-touch-icon-114x114-precomposed.png
+    apple-touch-icon-precomposed.png
     favicon.ico
     
     src/style.scss
@@ -136,9 +144,10 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     src/partials/_fonts.scss
     src/partials/_media.scss
     
-    js/jquery.min.js
-    js/modernizr.min.js
+    js/jquery-1.6.2.min.js
+    js/modernizr-2.0.6.min.js
     js/plugins.js
+    js/script.js
     
     .htaccess
     config.rb

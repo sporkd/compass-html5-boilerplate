@@ -1,23 +1,14 @@
 // This file must be imported before loading html5-boilerplate
 
-$base-font-family: unquote('sans-serif');  // default font-family
+// base
+$line-height: 1.4 !default;
+$font-color: #222 !default;
 
-$base-font-size: 13px;  // default font-size for YUI fonts
+$link-color: #00e !default;
+$link-hover-color: #06e !default;
+$link-visited-color: #551a8b !default;
 
-$base-line-height: 1.231;  // default line-height for YUI fonts
+$selected-font-color: #fff !default;
+$selected-background-color: #ff5e99 !default;
 
-$font-color: #444;
-
-$link-color: #607890;
-
-$link-hover-color: #036;
-
-$link-active-color: #607890;
-
-$link-visited-color: #607890;
-
-$selected-font-color: #fff;  // color for selected text
-
-$selected-background-color: #ff5E99;  // bg-color for selected text
-
-$list-left-margin: 2em;  // left margin for ul an ol
+$invalid-background-color: #f0dddd !default;
