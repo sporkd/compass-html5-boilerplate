@@ -117,7 +117,7 @@ Use this if you're not using Rails, but still want compass and the html5-boilerp
 It will create a simplified index.html (with haml source), but without the nice Rails helpers.
 
     gem install html5-boilerplate
-    compass create my_project -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
+    compass create my_project -r compass-h5bp -r html5-boilerplate -u html5-boilerplate --javascripts-dir js --css-dir css
 
 The `--javascripts-dir` and `--css-dir` flags are to keep consistent with the original project layout.
 If you omit them, be sure to edit your javascript and style tags accordingly in index.html.
@@ -144,9 +144,10 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     src/partials/_fonts.scss
     src/partials/_media.scss
     
-    js/jquery.min.js
-    js/modernizr.min.js
+    js/jquery-1.6.2.min.js
+    js/modernizr-2.0.6.min.js
     js/plugins.js
+    js/script.js
     
     .htaccess
     config.rb
