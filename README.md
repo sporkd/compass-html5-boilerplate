@@ -7,11 +7,11 @@ It has all you need to get Html5Boilerplate up and running with the Rails 3 asse
 For the rest of you who still want to use this gem for standalone projects or for older verisons of Rails, here's what you need to know:
 
 * The compass CSS library has been moved out of this gem and into the [compass-h5bp](https://github.com/sporkd/compass-h5bp) gem. This allows both gems to benifit from updates to the compass library.
-* The newest version of [compass-h5bp](https://github.com/sporkd/compass-h5bp) uses normalize.css instead of reset, just like current Html5Boilerplate. So upgrading might be a pain.
+* The newest version of [compass-h5bp](https://github.com/sporkd/compass-h5bp) uses normalize.css instead of reset, just like current Html5Boilerplate. So stay on v2.0.x if you don't feel like upgrading.
 
-So in short, I have shifted my efforts to [html5-rails](https://github.com/sporkd/html5-rails), and I now view this gem
-as the first standalone implementation of [compass-h5bp](https://github.com/sporkd/compass-h5bp).
-To this end I will continue to merge pull requests for those who want to continue using it.
+So in short, I have shifted my efforts to [html5-rails](https://github.com/sporkd/html5-rails) as the default Rails implementation of [compass-h5bp](https://github.com/sporkd/compass-h5bp),
+and I now view this gem as a standalone implementation of [compass-h5bp](https://github.com/sporkd/compass-h5bp).
+To this end I will continue to merge pull requests.
 
 Of course, I encourage anyone to create other implementations of [compass-h5bp](https://github.com/sporkd/compass-h5bp) for [insert your framework here].
 
