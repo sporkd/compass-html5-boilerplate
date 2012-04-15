@@ -2,10 +2,10 @@
 
 Gem::Specification.new do |s|
   s.name        = "html5-boilerplate"
-  s.version     = "2.1.0"
-  s.date        = "2012-01-24"
+  s.version     = "2.2.0"
+  s.date        = "2012-04-15"
 
-  s.authors     = ["Peter Gumeson", "Grady Kuhnline"]
+  s.authors     = ["Peter Gumeson", "Grady Kuhnline","Jonathan Fielding"]
   s.email       = ["gumeson@gmail.com"]
   s.homepage    = "http://github.com/sporkd/compass-html5-boilerplate"
   
