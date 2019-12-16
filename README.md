@@ -4,7 +4,7 @@ NOTICE!!! (And Now for Something Completely Different)
 If you are using Rails, you should now be using [html5-rails](https://github.com/sporkd/html5-rails) instead of this gem.
 It has all you need to get Html5Boilerplate up and running with the Rails 3 asset pipeline, plus a bunch of other nice new conventions.
 
-For the rest of you who still want to use this gem for standalone projects or for older verisons of Rails, here's what you need to know:
+For the rest of you who still want to use this gem for standalone projects or for older versions of Rails, here's what you need to know:
 
 * The compass CSS library has been moved out of this gem and into the [compass-h5bp](https://github.com/sporkd/compass-h5bp) gem. This allows all implementations using it to benefit from updates to the compass library.
 * The newest version of [compass-h5bp](https://github.com/sporkd/compass-h5bp) uses normalize.css instead of reset, just like current Html5Boilerplate. So stay on v2.0.x if you don't feel like upgrading.
